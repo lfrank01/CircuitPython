@@ -5,6 +5,8 @@ On Chromebook, I am using Caret for code and Beagle Term for a serial monitor. O
 
 I am using a Metro Express to perfrom my code. The Metro Express is a handy Arduino-like-machine, but it runs Circuit Python instead of C++.
 
+![Metro Express](/Hello_CircuitPython/Luke-Engineering_III-Metro_Express.jpg)
+
 Here is my Engineering III box, containing the parts that my code apply to:
 
 ![Engineering Parts Box](/Hello_CircuitPython/Luke-Engineering_III-Parts_Box.jpg)
