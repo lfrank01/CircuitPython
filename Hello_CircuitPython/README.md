@@ -19,8 +19,8 @@ After downloading Caret and Beagle Term on the Google Play Store for Chromebook,
 
 * Click on the main.py file. A .py file is CircuitPython.
 * The file should have lots of text. If it is run, the Metro Express should perform something with the built in LED.
-
-...
+* Now that the text editor knows that it is editibg CircuitPython, the large amount of code can be deleted. When typing new code, there should be different colors and effects.
+* 
 
 Here is the link to my code, which is listed as a seperate file in this folder. Note that a # means that the code is a comment and will not run. Another tip: saving a file as a .py file will often add CircuitPython effects, at least for Atom.io.
 
