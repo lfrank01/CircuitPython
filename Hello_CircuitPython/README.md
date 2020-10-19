@@ -22,7 +22,7 @@ For this assignment, I did my work on Chromebook. After downloading Caret and Be
 * Now that the text editor knows that it is editibg CircuitPython, the large amount of code can be deleted. When typing new code, there should be different colors and effects.
 * Here is what my code looked like: 
 
-![Hello_CircuitPython Code Screenshot](/Hello_CircuitPython/Hello_CircuitPython_Screenshot.py)
+![Hello_CircuitPython Code Screenshot](/Hello_CircuitPython/Luke-Engineering_III-Hello_CircuitPython_Screenshot.png)
 
 * Note that C++ uses "void loop()" with { } to run the main code. CircuitPython uses  "while True:" 
 * It is helpful to note that a piece of code in CircuitPthon that performs a function will have () after it. For RGB colors, the code is dot.fill((0,100,0)). There are two parethesis because the function is including a variable. The numbers each corespond to primary colors. The order of them is red, green, and blue.
