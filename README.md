@@ -3,7 +3,7 @@ My CircuitPython assignments are in this repository.
 
 On Chromebook, I am using Caret for code and Beagle Term for a serial monitor. On PC, I will probbaly use Atom.io.
 
-I am using a Metro Express to perform my code. The Metro Express is a handy Arduino-like-machine, but it runs Circuit Python instead of C++.
+I am using a Metro Express to perform my code. The Metro Express is a handy Arduino-like-machine. It runs Circuit Python instead of C++.
 
 ![Metro Express](/Hello_CircuitPython/Luke-Engineering_III-Metro_Express.jpg)
 
