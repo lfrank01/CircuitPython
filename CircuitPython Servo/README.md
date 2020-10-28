@@ -1,7 +1,8 @@
 # CicruitPython Servo 
 
-For the CircuitPython Servo assignment, the goal was to wire up a servo to react to capacitive touch. In order to accomplish this, I had to download the latest version of CircuitPython from an external site, retrieve a CircuitPython servo file from a .lib folder from GitHub, and most importantly, problem solve.
-The assignment was particularly difficult because little instruction was given. I had the help of my father and Dr. Shields to figure out the assignment, though I could have spent more time thinking about how to solve the problems that faced me.
+## Overview
+For the CircuitPython Servo assignment, the goal was to wire up a servo to react to capacitive touch. In order to accomplish this, I had to download the latest version of CircuitPython from an external site, retrieve a CircuitPython servo file from a .lib folder on GitHub, and most importantly, problem solve.
+The assignment was particularly difficult because little instruction was given. I had the help of my father and Dr. Shields to figure out the assignment, though I could have spent more time thinking about how to solve the problems that I faced.
 
 Another takeaway from the assignment was the use of circuit diagrams. Fancy software is not needed in order to create a circuit diagram. A circuit diagram can be done by hand and the different components can be represented with common symbols.
 
