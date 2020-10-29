@@ -1,6 +1,6 @@
 # CicruitPython Servo 
 
-#### Note - I worked on PC for the assignment. Instead of using Atom.io, since I had not installed the CircuitPython packages on it, I used Mu. Mu is a decent piece of software that has a debugging setting, but the built-in serial monitor was acting funky and there is no "save as" feature. I want to switch to Atom.io or PyCharm.
+#### Note - I worked on PC for the assignment. Since I had not installed the CircuitPython packages on Atom.io, I used Mu. Mu is a decent piece of software that has a debugging setting, but the built-in serial monitor was acting funky and there is no "save as" feature. I want to switch to Atom.io or PyCharm.
 
 ## Overview
 For the CircuitPython Servo assignment, the goal was to wire up a servo to react to capacitive touch. In order to accomplish this, I had to download the latest version of CircuitPython from an external site, learn how to be a better Google-er, and most importantly, problem solve.
@@ -9,8 +9,12 @@ The assignment was particularly difficult because little instruction was given. 
 
 Another takeaway from the assignment was the use of circuit diagrams. Fancy software is not needed in order to create a circuit diagram. A circuit diagram can be done by hand and the different components can be represented with common symbols.
 
+#### Note - It is important to understand what duty cycle and PMW are in servo control. I was confused about it and had my dad explain it. PMW is the frequency of the wavelength that the servo reads, meaning how many times in one standardized time it will go up and down. Duty cycle is when that wavelength is read as on and off.
+
+![Duty Cycle Picture](/CircuitPython_Servo/Luke-Engineering_III-Duty_Cycyle.py)
+
 ## Lessons Learned
-* Remember to look at all of the information present. It is usually useful or can be used to accomplish the task at hand if it has been assigned.
+* Remember to look at all of the information present. If it has been assigned, it is usually useful to accomplish the task at hand.
 * The Metro Express is only able to update when it is put in bootloader mode. 
 * To go into bootloader mode, double click the reset button on the Metro Express.
 * Once this is accomplished, the CIRCUITPY removable USB should show up as METROBOOT. The .UF2 file can now be uploaded:
@@ -22,7 +26,7 @@ Another takeaway from the assignment was the use of circuit diagrams. Fancy soft
 * I updated my Metro Express to version 5.3.1. The version 6.0.0 was unstable so I did not use it.
 
 * I rigged up my code to get the micro serve, not continuous servo, to move forward when I touched a wire, and backward when I touched another. I added debugging, which is super important, by including LED and serial monitor code. 
-* I also added code to make it so that when neither wire was pressed, the LED would turn off and a message would show up. Additionaly, I made it so that when I pressed both wires at the same time, the servo angle reset to 90.
+* I also added code to make it so that when neither wire was pressed, the LED would turn off and a message would show up. Additionaly, I made it so that when I pressed both wires at the same time, the servo angle reset to 90 and the light turned purple.
 
 * Most of my lessons learned are in my code, here:
 
