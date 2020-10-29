@@ -11,7 +11,7 @@ Another takeaway from the assignment was the use of circuit diagrams. Fancy soft
 
 #### Note - It is important to understand what duty cycle and PMW are in servo control. I was confused about it and had my dad explain it. PMW is the frequency of the wavelength that the servo reads, meaning how many times in one standardized time it will go up and down. Duty cycle is when that wavelength is read as on and off.
 
-![Duty Cycle Picture](/CircuitPython_Servo/Luke-Engineering_III-Duty_Cycyle.py)
+![Duty Cycle Picture](/CircuitPython_Servo/Luke-Engineering_III-CircuitPython_Servo-Duty_Cycle.png)
 
 ## Lessons Learned
 * Remember to look at all of the information present. If it has been assigned, it is usually useful to accomplish the task at hand.
