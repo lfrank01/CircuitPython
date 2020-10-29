@@ -25,7 +25,7 @@ Another takeaway from the assignment was the use of circuit diagrams. Fancy soft
 * The .UF2 file is used to update CircuitPython. Usually, on a removable USB, there should be a README.md stating the current version.
 * I updated my Metro Express to version 5.3.1. The version 6.0.0 was unstable so I did not use it.
 
-* I rigged up my code to get the micro serve, not continuous servo, to move forward when I touched a wire, and backward when I touched another. I added debugging, which is super important, by including LED and serial monitor code. 
+* I rigged up my code to get the micro servo, not continuous servo, to move forward when I touched a wire, and backward when I touched another. I added debugging, which is super important, by including LED and serial monitor code. 
 * I also added code to make it so that when neither wire was pressed, the LED would turn off and a message would show up. Additionaly, I made it so that when I pressed both wires at the same time, the servo angle reset to 90 and the light turned purple.
 
 * Most of my lessons learned are in my code, here:
@@ -34,5 +34,5 @@ Another takeaway from the assignment was the use of circuit diagrams. Fancy soft
 
 * Here is my hand-drawn circuit diagram:
 
-![CicuitPython Servo Circuit Diagram](/CircuitPython_Servo/Luke-Engineering_III-CicuitPython_Servo_Circuit_Diagram)
+![CicuitPython Servo Circuit Diagram](/CircuitPython_Servo/Luke-Engineering_III-CircuitPython_Servo_Circuit_Diagram.pdf)
 
