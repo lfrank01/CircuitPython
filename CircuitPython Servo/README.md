@@ -24,7 +24,7 @@ Another takeaway from the assignment was the use of circuit diagrams. Fancy soft
 * I rigged up my code to get the micro serve, not continuous servo, to move forward when I touched a wire, and backward when I touched another. I added debugging, which is super important, by including LED and serial monitor code. 
 * I also added code to make it so that when neither wire was pressed, the LED would turn off and a message would show up. Additionaly, I made it so that when I pressed both wires at the same time, the servo angle reset to 90.
 
-* Most of my lessons learned is in my code, here:
+* Most of my lessons learned are in my code, here:
 
 ![CircuitPython Servo Code](/CircuitPython_Servo/Luke-Engineering_III-CircuitPython_Servo.py)
 
