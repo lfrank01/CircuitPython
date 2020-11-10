@@ -20,7 +20,11 @@ Another note was that the Metro MO Express may not have had the memory to run th
 
 * The LCD backpack changes the parallel circuit of the LCD into a serial circuit. A serial circuit recieves bits of data one at a time. To remember this, think of a TV series, where there are subsequent episodes. The advantages of a serial circuit is that less wires and pins are needed.
 
-* Maybe you are wondering what an i2c device is. Well, an i2c device, which is what the LCD backpack is, only has two bus wires: (SDA) and (SCL), along with a ground and power source.
+Here is what an LCD backpack looks like:
+
+![Hello_CircuitPython Code Screenshot](/CircuitPython_LCD/Luke-Engineering_III-CircuitPython_LCD_Backpack.png)
+
+* Maybe you are wondering what an i2c device is. Well, an i2c device (Inter-Integrated Circuit), which is what the LCD backpack is, only has two bus wires: (SDA) and (SCL), along with a ground and power source.
 
 * The (SDA) wire stands for (Serial Data Wire) and transmits the 8-bit data one at a time.
 
@@ -28,16 +32,15 @@ Another note was that the Metro MO Express may not have had the memory to run th
 
 * Note that the (SDA) and (SCL) wires have pins with coresponding names on the Adafruit Metro MO Express.
 
+* A (.py) file is standard CircuitPython code. A (.mpy) is a micropython file, which compresses CircuitPython code into a compressed format. A (.mpy) file is helpful for data storage, but because it converts the code into an unreadable and unreversable format, it makes it hard to understand the libraries.
 
+* Some i2c LCD backpacks have an adress that needs to be found and used in the code. I explain how to do this in the code. There were two main addresses that were used: "0x27" and "0x3f." One of those adresses should work.
 
-
-
-
-* Most of my lessons learned are in my code, here:
+* My code comments explain most of how the code works. Here is a link to my code:
 
 ![CircuitPython_LCD_Code](/CircuitPython_LCD/Luke-Engineering_III-CircuitPython_LCD.py)
 
-* Here is my hand-drawn circuit diagram:
+* Also, here is my hand-drawn circuit diagram:
 
 ![CicuitPython_LCD_Circuit_Diagram](/CircuitPython_LCD/Luke-Engineering_III-CircuitPython_LCD_Circuit_Diagram.pdf)
 
