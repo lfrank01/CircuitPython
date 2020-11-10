@@ -14,7 +14,24 @@ Another note was that the Metro MO Express may not have had the memory to run th
 
 ## Lessons Learned
 
-Lessons Learned will be updated shortly. More content is coming.
+* A bus driver is used for the communication and transportation of data between seperate components. The (adafruit_bus_driver) was used for the communication between the LCD and i2c LCD backpack. 
+
+* An LCD without an LCD backbac runs a parallel circuit, meaning that for the eight data wires (also known as "8-bit") all run at the same time and read as a 0 or 1. The combination of those zeros and ones is what the LCD reads and interprets.
+
+* The LCD backpack changes the parallel circuit of the LCD into a serial circuit. A serial circuit recieves bits of data one at a time. To remember this, think of a TV series, where there are subsequent episodes. The advantages of a serial circuit is that less wires and pins are needed.
+
+* Maybe you are wondering what an i2c device is. Well, an i2c device, which is what the LCD backpack is, only has two bus wires: (SDA) and (SCL), along with a ground and power source.
+
+* The (SDA) wire stands for (Serial Data Wire) and transmits the 8-bit data one at a time.
+
+* The (SCL) wire stands for (Serial Clock Wire) and tells the (SDA) wire when to read the 8-bit data.
+
+* Note that the (SDA) and (SCL) wires have pins with coresponding names on the Adafruit Metro MO Express.
+
+
+
+
+
 
 * Most of my lessons learned are in my code, here:
 
