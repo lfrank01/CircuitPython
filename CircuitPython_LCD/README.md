@@ -22,7 +22,7 @@ Another note was that the Metro MO Express may not have had the memory to run th
 
 Here is what an LCD backpack looks like:
 
-![Hello_CircuitPython Code Screenshot](/CircuitPython_LCD/Luke-Engineering_III-CircuitPython_LCD_Backpack.png)
+![CircuitPython_LCD_Screenshot](/CircuitPython_LCD/Luke-Engineering_III-CircuitPython_LCD_Backpack.png)
 
 * Maybe you are wondering what an i2c device is. Well, an i2c device (Inter-Integrated Circuit), which is what the LCD backpack is, only has two bus wires: (SDA) and (SCL), along with a ground and power source.
 
