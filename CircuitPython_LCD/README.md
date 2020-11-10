@@ -2,14 +2,15 @@
 
 ## Overview
 
-For the CircuitPython LCD assignment, there were several subtle parts that made the creation of the code difficult. Luckily, I had the help of my father, who happens to be a computer programmer. The goal of the assignment was to wire up an LCD so that when one button was pressed, a counter would move up by one, and when another button was pressed, the counter would move down by one.
+For the CircuitPython LCD assignment, there were several subtle parts that made the creation of the code difficult. Luckily, I had the help of my father, who happens to be a computer programmer. The goal of the assignment was to wire up an LCD so that when one wire was pressed, a counter would move up by one, and when another wire was pressed, the counter would move down by one. Furthermore, the counter was supposed to only go up after each press, and not continue to go up when holding down a wire.
 
-In order to accomplish this, there was a repository that contained LCD code suited for Metro Express and another repository that contained code to update the adafruit_bus_library. In this repository, there was a file named "i2c_pcf8574_interface.py." This file was missing an "import microcontroller," and one of the reasons that the code was not working was because of that. That file is updated in [my repository.](https://github.com/lfrank01/CircuitPython/blob/main/CircuitPython_LCD/i2c_pcf8574_interface.py)
+In order to accomplish this, there was a repository that contained LCD code suited for Metro Express and another repository that contained code to update the adafruit_bus_library. In the LCD repository, there was a file named "i2c_pcf8574_interface.py," which made the LCD backpack work. A key note was that the author of the file used a microcontroller library instead of time.sleep(), because it was more accurate; except, he forgot to include an import of the microcontroller library in his code, so the code did not work.
+
+That file is updated in [my repository.](https://github.com/lfrank01/CircuitPython/blob/main/CircuitPython_LCD/i2c_pcf8574_interface.py)
 
 The website [CircuiPython Read The Docs](https://readthedocs.org/projects/circuitpython/) was a helpful tool, as it allowed me to search for the libraries that were needed.
 
-Another reason that the code was not working could have been because the Metro MO Express did not have enough space. In the serial monitor, there would have likely been a message saying "memory allocation error." In order to solve this, Dr. Shields translated the (.py) files from the LCD repository into (.mpy) files. The (.mpy) file translates standard python code into micropython code, which compresses the data. In order to do this, there is a .mpy cross programm, though it is only available for Linux.
-
+Another note was that the Metro MO Express may not have had the memory to run the i2c code, among other large libraries such as capacitive touch. As a solution, Dr. Shields converted the (.py) libraries into (.mpy) files, which are compressed. This was a smart decision. However, I did not do it, because an (.mpy) file is not readable, and I wanted to be able to understand the libraries.
 
 ## Lessons Learned
 
