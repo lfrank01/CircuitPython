@@ -33,8 +33,8 @@ For this assignment, I did my work on Chromebook. After downloading Caret and Be
 
 Here is the link to my code, which is listed as a seperate file in this folder. Note that a hashtag (#) means that the code is a comment and will not run. Another tip is that saving a file as a .py file will often add CircuitPython effects. At least, for Atom.io.
 
-![Hello_CircuitPython Code](/Hello_CircuitPython/Luke-Engineering_III-Hello_CircuitPython.py)
+[Hello_CircuitPython Code](/Hello_CircuitPython/Luke-Engineering_III-Hello_CircuitPython.py)
 
 Here is my circuit diagram. It did not require any accessories:
 
-![Hello_CircuitPython Circuit Diagram](/Hello_CircuitPython/Luke-Engineering_III-Hello_CircuitPython_Circuit_Diagram.pdf)
+[Hello_CircuitPython Circuit Diagram](/Hello_CircuitPython/Luke-Engineering_III-Hello_CircuitPython_Circuit_Diagram.pdf)
