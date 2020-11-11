@@ -30,9 +30,9 @@ Another takeaway from the assignment was the use of circuit diagrams. Fancy soft
 
 * Most of my lessons learned are in my code, here:
 
-![CircuitPython Servo Code](/CircuitPython_Servo/Luke-Engineering_III-CircuitPython_Servo.py)
+[CircuitPython Servo Code.](/CircuitPython_Servo/Luke-Engineering_III-CircuitPython_Servo.py)
 
 * Here is my hand-drawn circuit diagram:
 
-![CicuitPython Servo Circuit Diagram](/CircuitPython_Servo/Luke-Engineering_III-CircuitPython_Servo_Circuit_Diagram.pdf)
+[CicuitPython Servo Circuit Diagram.](/CircuitPython_Servo/Luke-Engineering_III-CircuitPython_Servo_Circuit_Diagram.pdf)
 
