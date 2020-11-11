@@ -41,8 +41,8 @@ Developer, Wired, et al. “Wiring I2C Module on 16×2 LCD with SCL/SDA.” 14co
 * Some i2c LCD backpacks have an adress that needs to be found and used in the code. I explain how to do this in the code. There were two main addresses that were used: "0x27" and "0x3f." One of those addresses should work.
 
 * My code comments explain most of how the code works. Here is a link to my code:
-[CircuitPython_LCD_Code](/CircuitPython_LCD/Luke-Engineering_III-CircuitPython_LCD.py)
+[CircuitPython_LCD_Code.](/CircuitPython_LCD/Luke-Engineering_III-CircuitPython_LCD.py)
 
 * Also, here is my hand-drawn circuit diagram:
-[CicuitPython_LCD_Circuit_Diagram](/CircuitPython_LCD/Luke-Engineering_III-CircuitPython_LCD_Circuit_Diagram.pdf)
+[CicuitPython_LCD_Circuit_Diagram.](/CircuitPython_LCD/Luke-Engineering_III-CircuitPython_LCD_Circuit_Diagram.pdf)
 
