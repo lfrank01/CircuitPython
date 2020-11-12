@@ -10,7 +10,7 @@ That file is updated in [my repository.](https://github.com/lfrank01/CircuitPyth
 
 The website [CircuitPython Read The Docs](https://readthedocs.org/projects/circuitpython/) was a helpful tool, as it allowed me to search for the libraries that were needed.
 
-Another note was that the Metro MO Express may not have had the memory to run the i2c code, among other large libraries such as capacitive touch. As a solution, Dr. Shields converted the (.py) libraries into (.mpy) files, which are compressed. This was a smart decision. However, I did not do it, because an (.mpy) file is not human-readable, and I wanted to be able to understand the libraries.
+Another note was that the Metro MO Express may not have had the memory to run the i2c code, among other large libraries such as capacitive touch. As a solution, Dr. Shields converted the (.py) libraries into (.mpy) files, which are compressed. One should note that an (.mpy) file is not readable by humans.
 
 ## Lessons Learned
 
@@ -30,15 +30,15 @@ Developer, Wired, et al. “Wiring I2C Module on 16×2 LCD with SCL/SDA.” 14co
 
 * Maybe you are wondering what an i2c device is. Well, an i2c device (Inter-Integrated Circuit), which is what the LCD backpack is, only has two bus wires: (SDA) and (SCL), along with a ground and power source.
 
-* The (SDA) wire stands for (Serial Data Wire) and transmits the data one bit at a time.
+* The (SDA) wire is the (Serial Data Wire) and transmits the data one bit at a time.
 
-* The (SCL) wire stands for (Serial Clock Wire) and tells the (SDA) wire when to read the 8-bit data.
+* The (SCL) wire is the (Serial Clock Wire) and tells the (SDA) wire when to read the 8-bit data.
 
 * Note that the (SDA) and (SCL) wires have pins with coresponding names on the Adafruit Metro MO Express.
 
 * A (.py) file is standard CircuitPython code. A (.mpy) is a micropython file, which compresses CircuitPython code into a compressed format. A (.mpy) file is helpful for data storage, but because it converts the code into an unreadable and unreversable format, it makes it hard to understand the libraries.
 
-* Some i2c LCD backpacks have an adress that needs to be found and used in the code. I explain how to do this in the code. There were two main addresses that were used: "0x27" and "0x3f." One of those addresses should work.
+* Some i2c LCD backpacks have an adress that needs to be found and used in the code. I explained how to do this in the code. There were two main addresses that were used: "0x27" and "0x3f." One of those addresses should work.
 
 * My code comments explain most of how the code works. Here is a link to my code:
 [CircuitPython_LCD_Code.](/CircuitPython_LCD/Luke-Engineering_III-CircuitPython_LCD.py)
