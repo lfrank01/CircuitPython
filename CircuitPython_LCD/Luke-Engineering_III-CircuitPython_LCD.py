@@ -50,22 +50,35 @@ touch_A3 = touchio.TouchIn(board.A3)
 touch_A4 = touchio.TouchIn(board.A4)
 count = 0
 
+lcd.print("Count:" + str(count))
+
 while True:
     # We need to clear the display every loop so that the text is replaced,
     # rather than added to previous text every time a wire is touched.
-    lcd.clear()
-    lcd.print("Count:" + str(count))
 
-    if touch_A3.value:
+    if touch_A3.value and not touch_A4.value:
+        lcd.clear()
         count = count + 1
+        lcd.print("Count:" + str(count))
 
-    if touch_A4.value:
+        while touch_A3.value:
+            time.sleep(0.25)  # to 'debounce' the wire against multiple touches
+            if touch_A4.value:
+                break
+
+    if touch_A4.value and not touch_A3.value:
+        lcd.clear()
         count = count - 1
+        lcd.print("Count:" + str(count))
 
+        while touch_A4.value:
+            time.sleep(0.25)  # debounce
+            if touch_A3.value:
+                break
+
+    # When both wires are touched, we are done.
     if touch_A3.value and touch_A4.value:
         break
-        # When both wires are touched, we are done.
 
-    time.sleep(0.5)
-
-lcd.print("\n Bye!")
+lcd.clear()
+lcd.print("Bye")
