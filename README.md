@@ -5,7 +5,7 @@ My CircuitPython assignments are in this repository.
 
 #### If there is a CircuitPython library or command that is confusing or that you would like to explore, go to [CircuiPython Read The Docs.](https://readthedocs.org/projects/circuitpython/)
 
-On Chromebook, I am using Caret for code and Beagle Term for a serial monitor. On PC, I will probbaly use Atom.io.
+On Chromebook, I am using Caret for code and Beagle Term for a serial monitor. On PC, I will probbaly use Atom.io or Mu.
 
 I am using a Metro Express to perform my code. The Metro Express is a handy Arduino-like-machine. It runs Circuit Python instead of C++.
 
