@@ -16,7 +16,7 @@ Also, I used the "T-shaped, slot center 7mm" model for my photointerrupter. The 
 
 * For more information, look at the image below. Pretend that the button is the photointerrupter:
 
-![Pulled-Up_Resistor_Picture](/CircuitPython_Photointerrupter/Luke-Engineering-III-CircuitPython_Photointerrupter-PulledUp_Resistor)
+![Pulled-Up_Resistor_Picture](/CircuitPython_Photointerrupter/Luke-Engineering-III-CircuitPython_Photointerrupter-PulledUp_Resistor.png)
 
 * I learned about the (digitalio) and (time) repositories: 
   * The (digitalio) repository is used for controlling digital input/output pins. I used it for the pin pull-up command.
