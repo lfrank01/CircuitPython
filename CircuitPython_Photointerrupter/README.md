@@ -26,4 +26,4 @@ Also, I used the "T-shaped, slot center 7mm" model for my photointerrupter. The 
 [CircuitPython_Photointerrupter_Code.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Photointerrupter.py)
 
 * Also, here is my hand-drawn circuit diagram:
-[CicuitPython_Photointerrupter_Circuit_Diagram.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Photointerrupter-Circuit_Diagram.pdf)
+[CicuitPython_Photointerrupter_Circuit_Diagram.](/CircuitPython_Photointerrupter/Luke-Engineering-III-CircuitPython_Photointerrupter-Circuit_Diagram.pdf)
