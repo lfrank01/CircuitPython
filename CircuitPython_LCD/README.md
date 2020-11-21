@@ -44,5 +44,5 @@ Developer, Wired, et al. “Wiring I2C Module on 16×2 LCD with SCL/SDA.” 14co
 [CircuitPython_LCD_Code.](/CircuitPython_LCD/Luke-Engineering_III-CircuitPython_LCD.py)
 
 * Also, here is my hand-drawn circuit diagram:
-[CicuitPython_LCD_Circuit_Diagram.](/CircuitPython_LCD/Luke-Engineering_III-CircuitPython_LCD_Circuit_Diagram.pdf)
+[CicuitPython_LCD_Circuit_Diagram.](/CircuitPython_LCD/Luke-Engineering-III-CircuitPython_LCD-Circuit-Diagram.pdf)
 
