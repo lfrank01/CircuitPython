@@ -18,6 +18,10 @@ Also, I used the "T-shaped, slot center 7mm" model for my photointerrupter. The 
 
 ![Pulled-Up_Resistor_Picture](/CircuitPython_Photointerrupter/Luke-Engineering-III-CircuitPython_Photointerrupter-PulledUp_Resistor.png)
 
+#### Note - Work Cited for the website that I screenshoted this image from:
+Pull-up Resistors, www.learn.sparkfun.com/tutorials/pull-up-resistors/all. 
+#### I used EasyBib for generating the MLA citation.
+
 * I learned about the (digitalio) and (time) repositories: 
   * The (digitalio) repository is used for controlling digital input/output pins. I used it for the pin pull-up command.
   * The (time) repository does, well, time. I have used it before in cases such as (time.sleep). I used it in this code for (time.time), which is a clock that counts in seconds. It was used to time the interval between each serial monitor message and allowed me to have the time counted in integers.
