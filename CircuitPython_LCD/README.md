@@ -26,7 +26,7 @@ Here is what an LCD backpack looks like:
 
 #### Note - Work Cited for the website that I screenshoted this image from:
 Developer, Wired, et al. “Wiring I2C Module on 16×2 LCD with SCL/SDA.” 14core.Com, www.14core.com/wiring-i2c-module-on-16x2-lcd-with-sclsda/. 
-#### I used EasyBib for generating a citation an MLA citation.
+#### I used EasyBib for generating the MLA citation.
 
 * Maybe you are wondering what an i2c device is. Well, an i2c device (Inter-Integrated Circuit), which is what the LCD backpack is, only has two bus wires: (SDA) and (SCL), along with a ground and power source.
 
