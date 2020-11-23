@@ -30,7 +30,7 @@ Pull-up Resistors, www.learn.sparkfun.com/tutorials/pull-up-resistors/all.
 [CircuitPython_Photointerrupter_Code.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Photointerrupter.py)
 
 * Also, here is my hand-drawn circuit diagram:
-[CicuitPython_Photointerrupter_Circuit_Diagram.](/CircuitPython_Photointerrupter/Luke-Engineering-III-CircuitPython_Photointerrupter-Circuit_Diagram.pdf)
+[CicuitPython_Photointerrupter_Circuit_Diagram.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Interrupter-Circuit-Diagram.pdf)
 
 #### I also have code with an LCD add-on.
 [CircuitPython_Photointerrupter_Code With An LCD.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Photointerrupter_With_LCD.py)
