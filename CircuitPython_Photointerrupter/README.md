@@ -33,7 +33,7 @@ Pull-up Resistors, www.learn.sparkfun.com/tutorials/pull-up-resistors/all.
 [CicuitPython_Photointerrupter_Circuit_Diagram.](/CircuitPython_Photointerrupter/Luke-Engineering-III-CircuitPython_Photointerrupter-Circuit_Diagram.pdf)
 
 #### I also have code with an LCD add-on.
-[CircuitPython_Photointerrupter_Code.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Photointerrupter_With_LCD.py)
+[CircuitPython_Photointerrupter_Code With An LCD.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Photointerrupter_With_LCD.py)
 
 * From this code, I learned that a standard (print) or (lcd.print) command will only take one argument. 
 * Functional code would look like (lcd.print("Interrupts:" + str(Counter)), not (lcd.print("Interrupts:" , str(Counter)).
