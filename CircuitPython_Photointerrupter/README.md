@@ -1,5 +1,5 @@
 # Overview
-For the CircuitPython_Photointerrupter assignment, I had to wire up and code a photointerrupter to emmit the number of times it had been interrupted every four seconds. An LCD add-on for displaying the number of interruptions was optional. I might add that onto my code.
+For the CircuitPython_Photointerrupter assignment, I had to wire up and code a photointerrupter to emmit the number of times it had been interrupted every four seconds. Additionally, I created code that allowed an LCD to display the number of photointerrupts every four seconds.
 
 Also, I used the "T-shaped, slot center 7mm" model for my photointerrupter. The different variations can be found [here.](https://cdn-shop.adafruit.com/product-files/3986/ee-sx47_67_ds_e_13_2_csm483.pdf)
 
@@ -31,3 +31,12 @@ Pull-up Resistors, www.learn.sparkfun.com/tutorials/pull-up-resistors/all.
 
 * Also, here is my hand-drawn circuit diagram:
 [CicuitPython_Photointerrupter_Circuit_Diagram.](/CircuitPython_Photointerrupter/Luke-Engineering-III-CircuitPython_Photointerrupter-Circuit_Diagram.pdf)
+
+#### I also have code with an LCD add-on.
+[CircuitPython_Photointerrupter_Code.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Photointerrupter_With_LCD.py)
+
+* From this code, I learned that a standard (print) or (lcd.print) command will only take one argument. 
+* Functional code would look like (lcd.print("Interrupts:" + str(Counter)), not (lcd.print("Interrupts:" , str(Counter)).
+* There are ways to include multiple arguments in a print statement. For a brief example, look at the code comments at the bottom of the LCD add-on code.
+* Another lesson learned was that I had to wire up two components to 5V. A simple but subtle solution was to connect power to the breadboard, and from there, connect my components to power. Mismatching power inputs and outputs can lead to malfunctions. Also, Vin is not intended for power supply; it is used to power the Adafruit Metro MO Express if needed, not for the Adafruit Metro MO Express to power other components.
+
