@@ -60,5 +60,5 @@ while True:
     Remaining = Max - time.time()
 
     if Remaining <= 0:  # (==) does not work.
-        print("Interrupts:", str(Counter))
+        print("Interrupts:" + str(Counter)) # A (,) would not work.
         Max = time.time() + 4

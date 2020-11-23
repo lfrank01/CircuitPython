@@ -11,7 +11,7 @@ from digitalio import DigitalInOut, Direction, Pull
 # (direction) is a parameter of (DigitalInOut),...
 # ... change a pin between an input and output.
 
-import time # Used in start = time.time.
+import time  # Used in start = time.time.
 import board
 
 # -------------- LCD Setup Start --------------
@@ -76,6 +76,10 @@ State = True
 # For data on loops and conditions such as (False):
 # http://projectpython.net/chapter03/
 
+lcd.print("LCD Go.")
+
+time.sleep(2)  # Looking for alternative for time.sleep.
+
 lcd.clear()
 
 Counter = 0
@@ -97,6 +101,22 @@ while True:
     Remaining = Max - time.time()
 
     if Remaining <= 0:  # (==) does not work.
-        # print("Interrupts:", str(Counter))
-        lcd.print("Interrupts:", str(Counter))
+        lcd.clear()
+        print("Interrupts:" + str(Counter))
+        lcd.print("Breaks:" + str(Counter))
+
+        # The use of a comma between "Breaks" and str(counter) is required...
+        # ... because a standard print statement will only take one argument.
+        # The error message was:
+        # "function takes 2 positional arguments but 3 were given."
+        # This was because I used a (,), which seperates arguments.
+        # The (+) makes the two arguments into one, allowing the code to work.
+
         Max = time.time() + 4
+
+        # There is a case when multiple argument...
+        # ... can be given: inline formatting.
+        # Inline formatting looks something like this:
+        # print("Interrupts: %i, mood: %s, moonphase: %d", Counter)
+        # The %s are fillers for the strings and the commas seperate them.
+        # The (%i) would indictate an integer.
