@@ -30,7 +30,7 @@ Pull-up Resistors, www.learn.sparkfun.com/tutorials/pull-up-resistors/all.
 [CircuitPython_Photointerrupter_Code.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Photointerrupter.py)
 
 * Also, here is my hand-drawn circuit diagram:
-[CicuitPython_Photointerrupter_Circuit_Diagram.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Interrupter-Circuit-Diagram.pdf)
+[CicuitPython_Photointerrupter_Circuit_Diagram.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Photointerrupter-Circuit-Diagram.pdf)
 
 #### I also have code with an LCD add-on.
 [CircuitPython_Photointerrupter_Code With An LCD.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Photointerrupter_With_LCD.py)
@@ -39,4 +39,5 @@ Pull-up Resistors, www.learn.sparkfun.com/tutorials/pull-up-resistors/all.
 * Functional code would look like (lcd.print("Interrupts:" + str(Counter)), not (lcd.print("Interrupts:" , str(Counter)).
 * There are ways to include multiple arguments in a print statement. For a brief example, look at the code comments at the bottom of the LCD add-on code.
 * Another lesson learned was that I had to wire up two components to 5V. A simple but subtle solution was to connect power to the breadboard, and from there, connect my components to power. Mismatching power inputs and outputs can lead to malfunctions. Also, Vin is not intended for power supply; it is used to power the Adafruit Metro MO Express if needed, not for the Adafruit Metro MO Express to power other components.
-
+#### Here is my circuit diagram for an LCD with photointerrupter:
+[CicuitPython_Photointerrupter_Circuit_Diagram With LCD.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Photointerrupter-Circuit-Diagram.pdf)
