@@ -92,7 +92,7 @@ while True:
 
             red = 255
             green = 0
-            blue = max(0,int(((Distance - 5) / Step_size) * 255))
+            blue = max(0, int(((Distance - 5) / Step_size) * 255))
 
             # I make the (distance) back to an (int)..
             # ... for the RGB function.
@@ -125,7 +125,7 @@ while True:
 
             red = 0
             green = 255
-            blue = max(0,255 - int(((Distance - 27.5) / Step_size) * 255))
+            blue = max(0, 255 - int(((Distance - 27.5) / Step_size) * 255))
 
             # The max function makes it so the RGB value will not go...
             # ... above (255).
