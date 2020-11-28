@@ -2,8 +2,10 @@
 
 import board
 import adafruit_hcsr04
+
 # The link to adafruit_hcsr04:
 # https://github.com/adafruit/Adafruit_CircuitPython_HCSR04/blob/master/adafruit_hcsr04.py
+
 import neopixel
 import time
 
@@ -17,6 +19,11 @@ dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
 Sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
 # Created an object for measuring the function of (.distance).
 
+# The trigger and echo pin measure ultrasonic distance:
+# The trigger pin creates an ultranonic pulse.
+# The echo pin recieves the ultrasonic pulse when it is reflected...
+# ... and creates a pulse read by the HC-SR04 that is proportional...
+# ... to the time it took for the ultrasonic pulse to bounce back.
 while True:
 
     # Notes on the different data types that were used, which were...
@@ -37,9 +44,9 @@ while True:
 
     Distance = Sonar.distance
 
-    # I found in the (adafruit_hcsr04) file that the (.distance) function...
-    # ... is by default a (float) data type. I converted it to an (str) for...
-    # the (print) function.
+    # I found in the (adafruit_hcsr04) file that the (.distance)...
+    # ... function is by default a (float) data type. I converted...
+    # ... it to an (str) for the (print) function.
 
     try:
         print("Distance is " + str(round(Distance)))
@@ -68,40 +75,66 @@ while True:
         # ... is any closer.
 
         # Between (5 cm) and (35 cm), the neopixel will do this:
-        # Red (255, 0, 0) -> Pink (255, 0, 255) -> Blue (
+        # Red (255, 0, 0) -> Pink (255, 0, 255) -> Blue (0, 0, 255)...
+        # ... -> Light Blue (0, 255, 255) -> Greeb (0, 255, 0).
+
+        # It is also important to note that there are four color...
+        # ... changes since there are four arrows. This means...
+        # ... that each color change will be in a (35) - (5)...
+        # ... interval divided by four, so each change is over (7.5 cm).
+
+        # ----------------------------------------------------------
 
         if Distance < 12.5:
-            # This section changes red to pink.
+
+            # Note that after (if) statement, there must be a colon.
+            # This section is for red to pink.
+
             red = 255
             green = 0
-            blue = max(0,
-                       int(((Distance - 5) / Step_size) * 255)
-                       )  # if 5cm then blue is 0 but must not go below 0
-            # When using an if or another similar key word such as...
-            # ... (while True) the sentence must end with a colon (:).
+            blue = max(0,int(((Distance - 5) / Step_size) * 255))
+
+            # I make the (distance) back to an (int)..
+            # ... for the RGB function.
+
+            # Using the (max) function allows the light to read...
+            # ... distances below (5) cm without the RGB value...
+            # ... becoming negative.
 
         if Distance > 12.5 and Distance < 20:
-            # go from pink to blue
+            # This section is for pink to blue.
+
             red = 255 - int(((Distance - 12.5) / Step_size) * 255)
-            # varies red from 255 to 0 in this range
             green = 0
             blue = 255
 
+            # Note that the (Distance) must be subtratced by...
+            # the highest data point of the last piece of code...
+            # so that the data range will always be in between...
+            # ... (0) and (255).
+
         if Distance > 20 and Distance < 27.5:
-            # from blue to light blue
-            red = 0  # varies btw 0 and 255
+            # This section is for blue to light blue.
+
+            red = 0
             green = int(((Distance - 20) / Step_size) * 255)
             blue = 255
 
         if Distance > 27.5:
-            # from light blue to green
-            red = 0  # varies btw 0 and 255
+            # This section is for light blue to green.
+
+            red = 0
             green = 255
-            blue = max(0,
-                       255 - int(((Distance - 27.5) / Step_size) * 255)
-                       )  # blue mustnt go below 0 even if distance is large
+            blue = max(0,255 - int(((Distance - 27.5) / Step_size) * 255))
+
+            # The max function makes it so the RGB value will not go...
+            # ... above (255).
 
         dot.fill((red, green, blue))
+
+        # Only one (dot.fill((red, green, blue))) is needed because...
+        # ... the if statement will only apply new conditions...
+        # to the code, not create a loop.
 
     except RuntimeError:
         print("Retrying")
