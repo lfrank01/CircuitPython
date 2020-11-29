@@ -1,10 +1,10 @@
 # Overview
-For the CircuitPython Distance Sensor assignment, the task was to wire up and code a HC-SR04 ultrasonic distance sensor to display the distance that it read through ultrasonic waves on the serial monitor. 
+For the CircuitPython Distance Sensor assignment, the task was to wire up and code a HC-SR04 ultrasonic distance sensor to display  on the serial monitor the distance that it read through ultrasonic waves. 
 
-Furthermore, the code had to make the built-in neopixel on the Adafruit Metro MO Express change from red to pink to blue to light blue to green as the distance read went from 5 cm to 35 A range of 0 to 30 was not used because the HC-SRO4 has trouble reading distances between 0 and 5 cm, likley because the ultransonic waves bounce back before they are read. 
+Furthermore, the code had to make the built-in neopixel on the Adafruit Metro MO Express change from red to pink to blue to light blue to green as the distance read went from 5 cm to 35. A range of 0 to 30 was not used because the HC-SRO4 had trouble reading distances between 0 and 5 cm, likley because the ultransonic waves bounced back before they were read. 
 
 This assignment introudced a new library that was created for the HC-SR04. Here it is:
-[adafruit_hcsr04.](https://github.com/adafruit/Adafruit_CircuitPython_HCSR04/blob/master/adafruit_hcsr04.py) file had to be added to the (.lib) folder of the CIRCUITPY removable USB!
+[adafruit_hcsr04.](https://github.com/adafruit/Adafruit_CircuitPython_HCSR04/blob/master/adafruit_hcsr04.py) 
 
 The origonal ultrasonic distance sensor code that was built off of can be found here:
 [Ultrasonic Sensor Base Code.](https://learn.adafruit.com/ultrasonic-sonar-distance-sensors/python-circuitpython)
@@ -20,6 +20,12 @@ print("Distance is " + str(round(Distance)))
 * Now, for how an ultrasonic distance sensor works:
   * There are four pins, which are ground (GND), power (VCC), trigger pin (TRIG) and the echo pin (ECHO).
   * The trigger pin (TRIG) creates an ultrasonic pulse which travels outward until hitting a solid which causes it to reflect back. It is the echo pin (ECHO) that recieves the reflected ultrasonic pulse and creates a wavelength that is proportional to the time between when the ultrasonic pulse went out and came in.
+* Here is an image explaning how the HC-SR04 and ultrasonic distance sensing work:
+![Ultrasound explanation.](https://learn.adafruit.com/ultrasonic-sonar-distance-sensors/python-circuitpython)
+#### Note - Work Cited for the website that I screenshoted this image from:
+“How to Attach a HC-SR04 Ultrasonic Sensor (5v) to a Micro:Bit.” Teachwithict.com, www.teachwithict.com/hcsr045v.html. 
+#### I used EasyBib for generating the MLA citation.
+
 
 * My code comments explain most of how the code works. Here is a link to my code:
 [CircuitPython_Distance_Sensor_Code.](/CircuitPython_Distance_Sensor/Luke-Engineering_III-CircuitPython_Distance_Sensor.py)
