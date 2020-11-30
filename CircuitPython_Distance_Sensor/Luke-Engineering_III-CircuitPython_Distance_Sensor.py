@@ -20,8 +20,8 @@ Sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
 # Created an object for measuring the function of (.distance).
 
 # The trigger and echo pin measure ultrasonic distance:
-# The trigger pin creates an ultranonic pulse.
-# The echo pin recieves the ultrasonic pulse when it is reflected...
+# The trigger pin creates an ultrasonic pulse.
+# The echo pin receives the ultrasonic pulse when it is reflected...
 # ... and creates a pulse read by the HC-SR04 that is proportional...
 # ... to the time it took for the ultrasonic pulse to bounce back.
 while True:
@@ -33,7 +33,7 @@ while True:
     # ... but rather converts all of its data into a printable format.
     # The (str) data type is required for (print) functions.
 
-    # The (float) stands for (floating point). It includes a demcial and...
+    # The (float) stands for (floating point). It includes a decimal and...
     # ... any value, such as (8.), that includes a decimal will be...
     # considered a floating point number unless told otherwise.
 
@@ -85,6 +85,13 @@ while True:
 
         # ----------------------------------------------------------
 
+        red = 0
+        green = 0
+        blue = 0
+
+        # Initializes red, green, and blue to 0 so that the LED is dark...
+        # ... unless explicitly set.
+
         if Distance < 12.5:
 
             # Note that after (if) statement, there must be a colon.
@@ -101,19 +108,19 @@ while True:
             # ... distances below (5) cm without the RGB value...
             # ... becoming negative.
 
-        if Distance > 12.5 and Distance < 20:
+        if 12.5 < Distance < 20:
             # This section is for pink to blue.
 
             red = 255 - int(((Distance - 12.5) / Step_size) * 255)
             green = 0
             blue = 255
 
-            # Note that the (Distance) must be subtratced by...
+            # Note that the (Distance) must be subtracted by...
             # the highest data point of the last piece of code...
             # so that the data range will always be in between...
             # ... (0) and (255).
 
-        if Distance > 20 and Distance < 27.5:
+        if 20 < Distance < 27.5:
             # This section is for blue to light blue.
 
             red = 0
