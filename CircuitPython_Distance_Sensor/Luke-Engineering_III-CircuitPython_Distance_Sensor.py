@@ -42,14 +42,14 @@ while True:
     # ... whether it be greater than or less than (.5), to the first...
     # ... lowest integer. For example, (8.9) would become (8).
 
-    Distance = Sonar.distance
+    distance = Sonar.distance
 
     # I found from the (adafruit_hcsr04) file that the (.distance)...
     # ... function is by default the (float) data type. I converted...
     # ... it to an (str) for the (print) function.
 
     try:
-        print("Distance is " + str(round(Distance)))
+        print("Distance is " + str(round(distance)))
 
         # The (round) function rounds a decimal up to the nearest integer...
         # if it greater than or equal to (0.5). It was used for to...
@@ -59,7 +59,7 @@ while True:
         # ... code does is round the (float) decimal and then print...
         # ... that number as an (str) data type.
 
-        Step_size = 7.5
+        step_size = 7.5
         # By adding a decimal after the (7), the value is...
         # ... set as a (float) data point.
 
@@ -92,14 +92,16 @@ while True:
         # Initializes red, green, and blue to 0 so that the LED is dark...
         # ... unless explicitly set.
 
-        if Distance < 12.5:
+        if distance < 12.5:
 
             # Note that after (if) statement, there must be a colon.
             # This section is for red to pink.
 
             red = 255
             green = 0
-            blue = max(0, int(((Distance - 5) / Step_size) * 255))
+            blue = max(0,
+                       int(((distance - 5) / step_size) * 255)
+                       )
 
             # I make the (Distance) back to an (int)...
             # ... for the RGB function.
@@ -108,10 +110,10 @@ while True:
             # ... distances below (5) cm without the RGB value...
             # ... becoming negative.
 
-        if 12.5 < Distance < 20:
+        if 12.5 < distance < 20:
             # This section is for pink to blue.
 
-            red = 255 - int(((Distance - 12.5) / Step_size) * 255)
+            red = 255 - int(((distance - 12.5) / step_size) * 255)
             green = 0
             blue = 255
 
@@ -120,19 +122,21 @@ while True:
             # so that the data range will always be in between...
             # ... (0) and (255).
 
-        if 20 < Distance < 27.5:
+        if 20 < distance < 27.5:
             # This section is for blue to light blue.
 
             red = 0
-            green = int(((Distance - 20) / Step_size) * 255)
+            green = int(((distance - 20) / step_size) * 255)
             blue = 255
 
-        if Distance > 27.5:
+        if distance > 27.5:
             # This section is for light blue to green.
 
             red = 0
             green = 255
-            blue = max(0, 255 - int(((Distance - 27.5) / Step_size) * 255))
+            blue = max(0,
+                       255 - int(((distance - 27.5) / step_size) * 255)
+                       )
 
             # The max function makes it so the RGB value will not go...
             # ... above (255).
