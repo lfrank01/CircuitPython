@@ -49,7 +49,7 @@ while True:
 
     State = Photo
     Photo = Interrupter.value
-    # If line 46 and 45 switch, the code doesn't work.
+    # If line 50 and 51 switch, the code doesn't work.
 
     # (.value) is the "digital logic level of the pin,"...
     # ... Meaning whether it is HIGH or LOW.
