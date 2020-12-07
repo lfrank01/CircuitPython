@@ -5,7 +5,10 @@ For the Classes, Objects, and Modules assignment, libraries and classes were int
 More information is coming soon.
 
 # Using PyCharm as an IDE
-I followed the following steps to enable PyCharm support for CircuitPython:
+PyCharm is a free Integrated Development Environment that makes software development easier.
+It helps with error checking and code consistency.
+I downloaded it from `https://www.jetbrains.com/pycharm/download`, and then 
+followed the following steps to enable PyCharm support for CircuitPython:
 
 1. Install the MicroPython plugin to PyCharm
 
@@ -28,8 +31,15 @@ read them.
 
 # Lessons Learned 
 
-* Class names are capitalized, such as /class Dog/.
+* By convention, class names are capitalized, such as `class Dog`.
 
-* Classes include shared variables and methods. Methods distinguish seperate instances of a class. 
+* Classes include shared variables and methods. Objects are what get created when we make separate instances of a class.
+
+* Every time an object is created, the class's `__init__` method is run by default. This means
+we can put code in `__init__` that we want to run for setting up an object according to
+  any arguments that were given to the class when we created it. For example, `me = Human("Luke")`
+  takes the argument `Luke` and gives it to the class `Human` to create a new Human object.
+  The `__init__` method of `Human` would be run when this line is executed.
+  
 
 More information is coming soon.
