@@ -42,3 +42,4 @@ Pull-up Resistors, www.learn.sparkfun.com/tutorials/pull-up-resistors/all.
 * Another lesson learned was that I had to wire up two components to 5V. A simple but subtle solution was to connect power to the breadboard, and from there, connect my components to power. Mismatching power inputs and outputs can lead to malfunctions. Also, Vin is not intended for power supply; it is used to power the Adafruit Metro MO Express if needed, not for the Adafruit Metro MO Express to power other components.
 #### Here is my circuit diagram for an LCD with photointerrupter:
 [CicuitPython_Photointerrupter_Circuit_Diagram With LCD.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Photointerrupter-Circuit_Diagram_With_LCD.pdf)
+
