@@ -10,7 +10,7 @@ I used the "T-shaped, slot center 7mm" model for my photointerrupter. The differ
 
 * My photointerrupter had three wires: (VCC), (GND), and a pin wire. The pin wire went to a Digital IO Pin, which means input/output.
 
-* The photointerrupter read either (True), wiring to (VCC), or (False), wiring to (GND). The question was "which is the default?"
+* The photointerrupter read either (True), wiring to (VCC), or (False), wiring to (GND). The question was "Which is the default?"
 
 * That's where (Interrupter.pull = Pull.UP), mentioned earlier in the code with (from digitalio import DigitalInOut, Direction, Pull), comes into play. It pulls up a resistor and makes the default reading (True) or to (VCC).
 
@@ -42,3 +42,4 @@ Pull-up Resistors, www.learn.sparkfun.com/tutorials/pull-up-resistors/all.
 * Another lesson learned was that I had to wire up two components to 5V. A simple but subtle solution was to connect power to the breadboard, and from there, connect my components to power. Mismatching power inputs and outputs can lead to malfunctions. Also, Vin is not intended for power supply; it is used to power the Adafruit Metro MO Express if needed, not for the Adafruit Metro MO Express to power other components.
 #### Here is my circuit diagram for an LCD with photointerrupter:
 [CicuitPython_Photointerrupter_Circuit_Diagram With LCD.](/CircuitPython_Photointerrupter/Luke-Engineering_III-CircuitPython_Photointerrupter-Circuit_Diagram_With_LCD.pdf)
+
