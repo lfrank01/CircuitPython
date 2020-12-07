@@ -13,3 +13,23 @@ More information is coming soon.
 * Classes include shared variables and methods. Methods distinguish seperate instances of a class. 
 
 More information is coming soon.
+
+# Notes:
+
+* The Adafruit Metro MO Express shoukd be plugged into the computer before starting up PyCharm. Otherwise, PyCharm will think the (lib) added-on library has no destination, and it will ignore it.
+
+* Steps:
+  * Made a new `.main` file called `TestLed.py` and imported board and digitalio.
+  * Made test code to get one RGB color working in the `main.py` file:
+   `import board`
+   `from digitalio import DigitalInOut, Direction, Pull
+   `my_led = DigitalInOut(board.D3)
+   `my_led = Direction.OUTPUT`
+   
+   `while True`
+    `my_led = value.False`
+    
+ * I needed to have a self in `self.r.value = False or True`.
+ 
+ * Edit > Find > Replace for replacing information on PyCharm.
+   
