@@ -10,7 +10,7 @@ I used the "T-shaped, slot center 7mm" model for my photointerrupter. The differ
 
 * My photointerrupter had three wires: (VCC), (GND), and a pin wire. The pin wire went to a Digital IO Pin, which means input/output.
 
-* The photointerrupter read either (True), wiring to (VCC), or (False), wiring to (GND). The question was "which is the default?"
+* The photointerrupter read either (True), wiring to (VCC), or (False), wiring to (GND). The question was "Which is the default?"
 
 * That's where (Interrupter.pull = Pull.UP), mentioned earlier in the code with (from digitalio import DigitalInOut, Direction, Pull), comes into play. It pulls up a resistor and makes the default reading (True) or to (VCC).
 
