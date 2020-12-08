@@ -1,29 +1,23 @@
 # Overview
 
-For the Classes, Objects, and Modules assignment, libraries and classes were introuded. 
+For the Classes, Objects, and Modules assignment, libraries and classes were introduced. 
 
-More information is coming soon.
+CircuitPython is an object-based programming language, meaning that individual objects or instances are created 
+from libraries that contain the information for those objects. 
 
-# Using PyCharm as an IDE
-PyCharm is a free Integrated Development Environment that makes software development easier.
-It helps with error checking and code consistency.
-I downloaded it from `https://www.jetbrains.com/pycharm/download`, and then 
-followed the following steps to enable PyCharm support for CircuitPython:
+For example, consider the library `life`. In the `life` library, there could be a class called `Human`. 
+In Circuit Python, the class `Human` would be referenced like this:
+`from life import Human`
+In the class `Human`, there would be different properties and methods. 
+An object could be created from the class called "Luke."
+Luke could have different properties such as age or hair color, and he could have methods such as eat or sleep.
 
-1. Install the MicroPython plugin to PyCharm
+This concept is the basis of object-based programming and is a super useful way of programming because it allows
+similar information to be grouped into libraries and classes, making organization easier.
 
-2. With the Metro Express attached, go to File > Settings > Languages & Frameworks > MicroPython. 
-I enabled it for this project and selected device type "ESP8266". For device path, I entered `COM5:`. This is the address
-of the serial port the board used on my Windows computer. Other computers could be different.
-This makes MicroPython appear in the PyCharm project navigation on the left under "External Libraries".
+In the Classes, Objects, and Modules assignment, the code for a `main.py` file that made a common anode RGB 
+LEDs change colors was given. The task was to create a library and class that made the code run properly.
 
-3. I went to File > Settings > Project > Project Structure. There I clicked "add content root", and navigated to the 
-lib folder on my Metro Express. This enables PyCharm to import the
-libraries and check my usage of libraries against the library code.
-
-I should note that some libraries like `board` and `neopixel` cannot be checked, because they are
-compiled into unreadable code specific to each CircuitPython type of board rather than being in Python, so PyCharm can't
-read them.
 
 
  
@@ -43,3 +37,30 @@ we can put code in `__init__` that we want to run for setting up an object accor
   
 
 More information is coming soon.
+
+# On Using PyCharm As An IDE 
+PyCharm is a free IDE (Integrated Development Environment) that makes software development easier.
+Some of its functions include:
+* Checking code for potential errors and providing code improvements.
+* Compatibility with GitHub (Git pushes and Commits can be done directly)
+* Spell-checking markdown files (.md).
+
+To install PyCharm as a CircuitPython IDE, first, download PyCharm from `https://www.jetbrains.com/pycharm/download`
+Afterward, follow the steps below:
+
+1. Install the MicroPython plugin to PyCharm.
+
+2. With the Metro Express attached, go to File > Settings > Languages & Frameworks > MicroPython. 
+Enable it for this project and select device type "ESP8266". For device path, `COM5:` was used. This is the address
+of the serial port the board used on **my** Windows computer. Other computers could be different.
+   
+This makes MicroPython appear in the PyCharm project navigation on the left under "External Libraries".
+
+3. Go to File > Settings > Project > Project Structure. There, click "add content root" and navigate to the 
+lib folder for the Adafruit Metro MO Express. 
+   
+This enables PyCharm to import the libraries and check usage of libraries against the library code.
+
+It should be noted that some libraries like `board` and `neopixel` cannot be checked. They are
+compiled into unreadable code (`.mpy`) that is specific to each CircuitPython type of board instead of Python, 
+so PyCharm can't read them.
