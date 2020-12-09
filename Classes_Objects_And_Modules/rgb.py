@@ -90,14 +90,15 @@ class RGB:
         self.b.value = True
 
     def rainbow(self, rate: float):
-        # Here I hand in a variable to this method called rate, which is the reciprocal of the time
-        # between colors. The colon after rate shows the data type I want to use, in this case a float.
-        # If we were to hand in a variable of incorrect type, for example a string, Python would throw an error
-        # (or in my case, PyCharm would warn me of an error)
+        # Here, variable to this method called rate is handed in, which is the reciprocal of the time
+        # between colors. The colon after rate shows the data type that will be used.
+        # In this case a float or floating point number (a number with a decimal point).
+
+        # If the wrong data type was given, such as a string, Python would throw an error.
+        # Even better, with PyCharm, the correct data type would be provided.
 
         self.yellow()
-        # when using () after a method name, it calls
-        # that method from this method.
+        # When using () after a method name, it calls that method from this method.
         time.sleep(1. / rate)
         self.green()
         time.sleep(1. / rate)
