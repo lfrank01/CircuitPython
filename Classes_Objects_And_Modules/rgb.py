@@ -1,24 +1,45 @@
-# This is my library for the Classes, Objects, and Modules assignment.
-# The goal is to create the class /RGB/ and define it.
+# This is a (digitalio)-based library for the Classes, Objects, and Modules assignment.
+# For the Classes, Objects, and Modules assignment, a main.py file was precreated with the
+# function of controlling a common anode RGB LED.
+# The goal of the assignment was to create a functional library and class for the main.py code.
+
+# This library is that class.
 
 import digitalio
+# This library is using (digialio), which works fine for making RGB colors go on or off, but not for
+# modulating brightness.
 import time
 
 
 class RGB:
 
     def __init__(self, red_pin, green_pin, blue_pin):
-        # The three arguments are the different values,
-        # which are red, green, and blue,
-        # That will make the common anode RGB change color.
-        # An anode is a positively charged electrode.
-        # For these LEDs, the anode is connected to +5v.
-        # So to make current flow, we need the appropriate
-        # color pin to be connected to 0v (ground) - which is
-        # will happen if we set that output's value to False, not True.
+
+        # The (__init__) code runs when an object/instance is created.
+        # It provides arguments for the object to use.
+
+        # The three arguments are the pins that will correspond to
+        # the red, green, and blue RGB values.
+
+        # The pins are part of a common anode RGB LED, in which a common power source (input)
+        # is shared between the different pins (output).
+
+        # It is important to note that an anode is a positively-charged electrode,
+        # and a cathode is a negatively-charged electrode.
+
+        # For these RGB pins, the anode is connected to +5v (input).
+        # Because the RGB pins must be ground for the circuit to work (because current is created
+        # by differences in voltage, the RGB pin values must be set to False or 0 to turn the RGB on.
+        # If the RGB pins were set to True or 1, the current would not travel anywhere because
+        # there would not be a significant difference in voltage.
 
         self.r = digitalio.DigitalInOut(red_pin)
         self.r.direction = digitalio.Direction.OUTPUT
+
+        # The argument (r) must be (self.r) because there will be instances created from it, such as r1, r2, etc.
+        # What the above code does is ensure that argument (r) will be a digital input-output pin and then
+
+        # make it an output.
 
         self.g = digitalio.DigitalInOut(green_pin)
         self.g.direction = digitalio.Direction.OUTPUT
@@ -27,43 +48,43 @@ class RGB:
         self.b.direction = digitalio.Direction.OUTPUT
 
     def red(self):
-        # glow red
+        # The common anode RGB LED will glow red - set red pin on and others off.
         self.r.value = False
         self.g.value = True
         self.b.value = True
 
     def magenta(self):
-        # glow magenta - set green pin off and others on
+        # The common anode RGB LED will glow magenta  - set green pin off and others on.
         self.r.value = False
         self.g.value = True
         self.b.value = False
 
     def blue(self):
-        # glow blue - set blue pin on and others off
+        # The common anode RGB LED will glow blue - set blue pin on and others off.
         self.r.value = True
         self.g.value = True
         self.b.value = False
 
     def cyan(self):
-        # glow cyan - set red pin off and others on
+        # The common anode RGB LED will glow cyan - set red pin off and others on.
         self.r.value = True
         self.g.value = False
         self.b.value = False
 
     def green(self):
-        # glow green - set green pin on and others off
+        # The common anode RGB LED will glow green - set green pin on and others off.
         self.r.value = True
         self.g.value = False
         self.b.value = True
 
     def yellow(self):
-        # glow yellow - set blue pin off and others on
+        # The common anode RGB LED will glow yellow - set blue pin off and others on.
         self.r.value = False
         self.g.value = False
         self.b.value = True
 
     def dark(self):
-        # Turn LED off
+        # The common anode RGB LED will turn off
         self.r.value = True
         self.g.value = True
         self.b.value = True
