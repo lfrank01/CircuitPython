@@ -1,5 +1,5 @@
 # This is a (digitalio)-based library for the Classes, Objects, and Modules assignment.
-# For the Classes, Objects, and Modules assignment, a main.py file was precreated with the
+# For the Classes, Objects, and Modules assignment, a main.py file was pre-made with the
 # function of controlling a common anode RGB LED.
 # The goal of the assignment was to create a functional library and class for the main.py code.
 

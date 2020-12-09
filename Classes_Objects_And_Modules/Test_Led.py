@@ -11,4 +11,3 @@ my_led.direction = Direction.OUTPUT
 
 while True:
     my_led.value = False
-

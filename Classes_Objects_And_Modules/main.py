@@ -40,7 +40,7 @@ rate2 = 3.0
 
 while True:
     myRGB1.rainbow(rate1)
-    # Fade through the colors of the rainbow at the given rate.  Oooooh, pretty!
+    # Fade through the colors of the rainbow at the given rate. Oooooh, pretty!
     myRGB2.rainbow(rate2)
-    # Fade through the colors of the rainbow at the given rate.  Oooooh, pretty!
+    # Fade through the colors of the rainbow at the given rate. Oooooh, pretty!
     time.sleep(1)
