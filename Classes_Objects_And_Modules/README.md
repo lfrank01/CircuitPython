@@ -40,15 +40,27 @@ LEDs change colors was given. The task was to create a library and class that ma
   and its corresponding pin. This is because the RGB color legs run in parallel. Each RGB color leg requires a different 
   amount of voltage to operate (because of Physics) and if more than one were to be turned on, the voltage would default
   to the lowest voltage required, cutting off power from the other RGB legs. If only one RGB color leg was turned on, 
-  one resistor could be shared among all of the RGB color legs, but it does not work when multiple are turned on.
+  one resistor could be shared among all the RGB color legs, but it does not work when multiple are turned on.
   
 * For a more in depth explanation, visit this site:
   [Common Anode RGB LED Wiring Explanation](https://www.circuitbread.com/tutorials/why-cant-i-share-a-resistor-on-the-common-anode-or-cathode-of-my-rgb-led)
-
+  
+* Also, it is important to note that the common anode leg will be the longest leg in the common anode RGB LED.
+  Then, the leg to the right is the red RGB color leg.
+  
 * Also, here is my wiring diagram, though it was not hand-drawn because the wiring got messy:
+  [Work In Progress]()
 
+* Another helpful tip was to create some test code to check how the common anode RGB LED worked. 
 
-More information is coming soon.
+* Here is what was used for the test code:
+[Test_LED.py](/Classes_Objects_And_Modules/Test_Led.py)
+  
+* My code comments explain most of how the code works. Here is my library code:
+[rgb.py](/Classes_Objects_And_Modules/rgb.py)
+  
+* Below is the `main.py` file that imported the `rgb.py` library:
+[main.py](/Classes_Objects_And_Modules/main.py)
 
 # On Using PyCharm As An IDE 
 PyCharm is a free IDE (Integrated Development Environment) that makes software development easier.
