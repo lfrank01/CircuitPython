@@ -10,16 +10,18 @@ In Circuit Python, the class `Human` would be referenced like this:
 
 `from life import Human`
 
+The code for the library `life` would usually be placed in a file called `life.py`.
+
 In the class `Human`, there would be different properties and methods. 
 An object could be created from the class called "Luke."
 
-Luke could have different properties such as age or hair color, and he could have methods such as eat or sleep.
+`Luke` could have different properties such as age or hair color, and he could have methods such as eat or sleep.
 
 This concept is the basis of object-based programming and is a super useful way of programming because it allows
 similar information to be grouped into libraries and classes, making organization easier.
 
-In the Classes, Objects, and Modules assignment, the code for a `main.py` file that made a common anode RGB 
-LEDs change colors was given. The task was to create a library and class that made the code run properly.
+In the Classes, Objects, and Modules assignment, the code for a `main.py` file was given that made a common anode RGB 
+LEDs change colors. The task was to create a library and class that made the code run properly.
 
 
 # Lessons Learned 
@@ -32,9 +34,11 @@ LEDs change colors was given. The task was to create a library and class that ma
   For example, `me = Human("Luke")` takes the argument `Luke` and gives it to the class `Human` to 
   create a new Human object. The `__init__` method of `Human` would be run when this line is executed.
 
-* An anode is a positively-charged electrode, and a cathode is a negatively-charged electrode.
+* An anode is the positive lead of the LED (where electrons flow out), and a cathode is the negative lead of the LED (where electrons flow in).
 
-* A common anode RGB LED is basically a red, green, and blue LED crammed into one compartment.
+* A common anode RGB LED is basically a red, green, and blue LED crammed into one compartment. So electrons flow into one of the pins corresponding to a color, 
+  and they all flow out of the common anode pin back to the power source (to the positive connection because electrons are attracted to positive charge 
+  and repelled by negative charge).
 
 * The common anode RGB LED has an interesting way of being wired. A resistor must be placed between each RGB color leg 
   and its corresponding pin. This is because the RGB color legs run in parallel. Each RGB color leg requires a different 
@@ -48,7 +52,7 @@ LEDs change colors was given. The task was to create a library and class that ma
 * Also, it is important to note that the common anode leg will be the longest leg in the common anode RGB LED.
   Then, the leg to the right is the red RGB color leg.
   
-* Also, here is my wiring diagram, though it was not hand-drawn because the wiring got messy:
+* Here is a wiring diagram, though it was not hand-drawn because the wiring got messy:
   [Work In Progress]()
 
 * Another helpful tip was to create some test code to check how the common anode RGB LED worked. 
