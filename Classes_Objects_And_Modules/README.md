@@ -66,6 +66,15 @@ LEDs change colors. The task was to create a library and class that made the cod
 * Below is the `main.py` file that imported the `rgb.py` library:
 [main.py](/Classes_Objects_And_Modules/main.py)
 
+**Note on using digital outputs**
+* The assignment was to use digital outputs to drive the LED, not analog ones. As a result, the color possibilities would be limited to combinations 
+of whatever corresponded to each pin being on or off. This would result in 8 possible colors being rendered including black (all off) and 
+white (all on) (2^3 combinations because there are 3 pins and 2 states, on or off). 
+
+* `digitalio` is the library used to drive the digital output pins. To make more colors, one would have to use pulse width modulation on the digital output pins to create the effect of analog variation of the current flowing to each pin rather than the digital states of only on or off.
+
+
+
 # On Using PyCharm As An IDE 
 PyCharm is a free IDE (Integrated Development Environment) that makes software development easier.
 Some of its functions include:
