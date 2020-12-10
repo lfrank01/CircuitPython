@@ -53,7 +53,9 @@ LEDs change colors. The task was to create a library and class that made the cod
   Then, the leg to the right is the red RGB color leg.
   
 * Here is a wiring diagram, though it was not hand-drawn because the wiring got messy:
-  [Work In Progress]()
+![Two Common Anode RGB LEDs Circuit Diagram](/Classes_Objects_And_Modules/Two_Common_Anode_RGB_LEDs.png)
+
+#### Note - The circuit diagram was made on Tinkercad, which does not have an Adafruit Metro MO Express import option. The circuit diagram might be changed another time if a better circuit diagram creator if found.
 
 * Another helpful tip was to create some test code to check how the common anode RGB LED worked. 
 
