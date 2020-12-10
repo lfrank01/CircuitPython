@@ -14,7 +14,6 @@ import time
 class RGB:
 
     def __init__(self, red_pin, green_pin, blue_pin):
-
         # The (__init__) code runs when an object/instance is created.
         # It provides arguments for the object to use.
 
@@ -88,6 +87,13 @@ class RGB:
         self.r.value = True
         self.g.value = True
         self.b.value = True
+
+    # Note - The method (rainbow) below in this code does not actually fade in and out of the rainbow
+    # as the assignment asked for. The section below was optional, and while it would be nice to complete
+    # it, the library (pulseio) is needed to so, which, as of now, has not been understood yet.
+
+    # The method below makes the two common anode RGB LEDs cycle through a series of colors, one at a time, in
+    # a loop; however, it does not cycle through the colors of the rainbow and does not fade.
 
     def rainbow(self, rate: float):
         # Here, variable to this method called rate is handed in, which is the reciprocal of the time
