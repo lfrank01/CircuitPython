@@ -15,8 +15,15 @@ Note that the `digitalio` library was used for the assignment. I am still trying
 
 The original circuit diagram of the assignment was as follows:
 
-![Origonal FancyLED Circuit Diagram]()
+![FancyLED Origonal Circuit Diagram](Luke-Engineering_III-FancyLED_Origonal_Assignment_Image.png)
 
+However, the method by which the LEDs were wired was inefficient. Since I did not have enough wires to follow the
+wiring diagram specifically, I used a wiring diagram that uses fewer wires but is as effective. 
+
+Here is the revised wiring diagram: 
+
+![FancyLED Revised Circuit Diagram](Luke-Engineering_III-FancyLED_Revised_Assignment_Image.png)
+#### Note - The revised circuit diagram was made on Tinkercad, which does not have an Adafruit Metro MO Express import option. The circuit diagram might be changed another time if a better circuit diagram creator if found.
 
 # Lessons Learned 
 
@@ -26,7 +33,7 @@ The original circuit diagram of the assignment was as follows:
 * To address multiple items at a time in a list, the code would be like `self.list[number1, number2, etc.`.
 
 * When writing code that says `self.list[number]`, the [] serve to index the list. It is strange, but the indexing
-  begins at 0. For example, self.led_list[0] would refer to the first item in the list.
+  begins at 0. For example, `self.led_list[0]` would refer to the first item in the list.
   
 * The `range` method can be used to loop code a specified number of times. Range can be set between 0 and a variable.
   It is helpful because, in a method, the variable can be set a standard but then also changed. The `range` method allows
