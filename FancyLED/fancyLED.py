@@ -1,17 +1,20 @@
-import board
 import time
+import random
 from digitalio import DigitalInOut, Direction
 
 
 class FancyLED:
+    def __init__(self, a_pin, b_pin, c_pin):
 
-    def __init__(self, pin1, pin2, pin3):
-        led1 = DigitalInOut(pin1)
+        led1 = DigitalInOut(a_pin)
         led1.direction = Direction.OUTPUT
-        led2 = DigitalInOut(pin2)
+
+        led2 = DigitalInOut(b_pin)
         led2.direction = Direction.OUTPUT
-        led3 = DigitalInOut(pin3)
+
+        led3 = DigitalInOut(c_pin)
         led3.direction = Direction.OUTPUT
+
         # These variables don't need to be made into class variables with
         # a "self." because they don't need to be addressed by the class methods
         # individually - only as a collective. So the list that combines these
@@ -32,7 +35,9 @@ class FancyLED:
         # It can also be left out when the method is called and it will work with the
         # default value.
 
-        self.led_list[1] = True  # turn on the middle LED
+        print("Alternating now")
+        self.led_list[1].value = True  # turn on the middle LED
+
         for blink_number in range(0, number_of_blinks):
             lit = False
             if blink_number % 2 == 0:
@@ -42,24 +47,77 @@ class FancyLED:
             # lit will be set to True
             # Another way of stating this would be:
             # lit = blink_number % 2 == 0
-            self.led_list[0] = lit
-            self.led_list[2] = not lit
+            self.led_list[0].value = lit
+            self.led_list[2].value = not lit
             time.sleep(1)
-        self.all_off()  # when blinking is finished, turn all of the LEDs off.
+            print(str(blink_number))
 
-    def blink(self):
+    def blink(self, number_of_blinks=6):
 
-        self.all_off()  # when blinking is finished, turn all of the LEDs off.
+        print("Blinking now")
+        for blink_number in range(0, number_of_blinks):
+            lit = False
 
-    def chase(self):
+            if blink_number % 2 == 0:
+                lit = True
 
-        self.all_off()  # when blinking is finished, turn all of the LEDs off.
+            self.led_list[0].value = lit
+            self.led_list[1].value = lit
+            self.led_list[2].value = lit
+            time.sleep(1)
 
-    def sparkle(self):
+            print(str(blink_number))
 
-        self.all_off()  # when blinking is finished, turn all of the LEDs off.
+    def chase(self, number_of_chases=4):
+
+        print("Chasing now")
+        counter = 0
+        for blink_number in range(0, number_of_chases):
+            lit = False
+
+            if counter == 0:
+                self.led_list[0].value = not lit
+                self.led_list[1].value = lit
+                self.led_list[2].value = lit
+                counter += 1
+                print("Counter:" + str(counter))
+                time.sleep(1)
+
+            if counter == 1:
+                self.led_list[0].value = not lit
+                self.led_list[1].value = not lit
+                self.led_list[2].value = lit
+                counter += 1
+                print("Counter:" + str(counter))
+                time.sleep(1)
+
+            if counter == 2:
+                self.led_list[0].value = not lit
+                self.led_list[1].value = not lit
+                self.led_list[2].value = not lit
+                counter = 0
+                print("Counter:" + str(counter))
+                time.sleep(1)
+
+    def sparkle(self, number_of_sparkles=50):
+
+        print("Sparkling now")
+        lit = True
+        for blink_number in range(0, number_of_sparkles):
+            self.led_list[0].value = not lit
+            self.led_list[1].value = not lit
+            self.led_list[2].value = not lit
+
+            self.led_list[random.randrange(0, 3, 1)].value = lit
+            time.sleep(0.1)
 
     def all_off(self):
+
         for led in self.led_list:
-            led = False
+            led.value = False
+        time.sleep(1)
         # This loops through each LED in the list and sets it to False, turning it off.
+
+# For nicer looking code, I used a tool called "black": https://pypi.org/project/black/
+# It reformats any python file into a standard format. To use it you open a terminal window in
+# the same directory as the file and enter for example: black fancyLED.py
