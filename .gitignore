@@ -10,3 +10,11 @@ CircuitPython_Servo/.idea/.name
 CircuitPython_Servo/.idea/workspace.xml
 CircuitPython_Servo/.idea/workspace.xml
 CircuitPython_Servo/.idea/workspace.xml
+FancyLED/.idea/FancyLED.iml
+FancyLED/.idea/inspectionProfiles/profiles_settings.xml
+FancyLED/.idea/inspectionProfiles/Project_Default.xml
+FancyLED/.idea/libraries/MicroPython.xml
+FancyLED/.idea/misc.xml
+FancyLED/.idea/modules.xml
+FancyLED/.idea/vcs.xml
+FancyLED/fancy_led.py
