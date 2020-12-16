@@ -39,6 +39,11 @@ Here is the revised wiring diagram:
   It is helpful because, in a method, the variable can be set a standard but then also changed. The `range` method allows
   The code in the `main.py` to specify the number of loops that is wanted for a method.
   
+* Using `%2` in `if alternate_number % 2 == 0:` divides the `alternate_number` by 2 and then looks at the remainder.
+  It is useful with the `range` function because if the range increases by whole numbers, it will either be an even number
+  (remainder = 0), or an odd number (remainder does not = 0). Two opposite options were created using this idea, as 
+  can be seen in the alternate method.
+
 * My code comments explain most of how the code works. Here is my library code:
   [fancyLED.py](/FancyLED/fancyLED.py)
   
