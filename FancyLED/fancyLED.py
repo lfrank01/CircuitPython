@@ -7,7 +7,7 @@ class FancyLED:
 
     def __init__(self, pin1, pin2, pin3):
         led1 = DigitalInOut(pin1)
-        led1.direction = Direction.OUPUT
+        led1.direction = Direction.OUTPUT
         led2 = DigitalInOut(pin2)
         led2.direction = Direction.OUTPUT
         led3 = DigitalInOut(pin3)
@@ -24,6 +24,7 @@ class FancyLED:
         self.led_list = [led1, led2, led3]
         # An empty list is created by closed brackets [] and can be
         # added to by writing .append(something).
+        self.all_off()  # start by explicitly turning all LEDs off.
 
     def alternate(self, number_of_blinks=4):
         # The method can be handed a variable for how many blinks we want, but it
@@ -32,8 +33,8 @@ class FancyLED:
         # default value.
 
         self.led_list[1] = True  # turn on the middle LED
-        lit = False
         for blink_number in range(0, number_of_blinks):
+            lit = False
             if blink_number % 2 == 0:
                 lit = True
             # This line looks at the remainder of dividing blink_number by 2.
