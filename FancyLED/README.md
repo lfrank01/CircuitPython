@@ -15,14 +15,14 @@ Note that the `digitalio` library was used for the assignment. I am still trying
 
 The original circuit diagram of the assignment was as follows:
 
-![FancyLED Origonal Circuit Diagram](Luke-Engineering_III-FancyLED_Origonal_Assignment_Image.png)
+![FancyLED Origonal Circuit Diagram](/FancyLED/Luke-Engineering_III-FancyLED_Origonal_Circuit_Diagram.png)
 
 However, the method by which the LEDs were wired was inefficient. Since I did not have enough wires to follow the
 wiring diagram specifically, I used a wiring diagram that uses fewer wires but is as effective. 
 
 Here is the revised wiring diagram: 
 
-![FancyLED Revised Circuit Diagram](Luke-Engineering_III-FancyLED_Revised_Assignment_Image.png)
+![FancyLED Revised Circuit Diagram](/FancyLED/Luke-Engineering_III-FancyLED_Revised_Circuit_Diagram.png)
 #### Note - The revised circuit diagram was made on Tinkercad, which does not have an Adafruit Metro MO Express import option. The circuit diagram might be changed another time if a better circuit diagram creator if found.
 
 # Lessons Learned 
