@@ -17,7 +17,7 @@ been compiled to the `.mpy` format.
 
 The original circuit diagram of the assignment was as follows:
 
-![FancyLED Origonal Circuit Diagram](./Luke-Engineering_III-FancyLED_Origonal_Circuit_Diagram.png)
+![FancyLED Original Circuit Diagram](./Luke-Engineering_III-FancyLED_Origonal_Circuit_Diagram.png)
 
 However, the method by which the LEDs were wired was inefficient. Since I did not have enough wires to follow the
 wiring diagram specifically, I used a wiring diagram that uses fewer wires but is as effective. 
@@ -30,15 +30,15 @@ Here is the revised wiring diagram:
 # Lessons Learned 
 
 * Specific items in a list do not need to be individual class variables referred to with a `self.` statement. Rather, the list as a whole is the
-  a class variable that is accessed with a `self.` statement and one can individually address the items in the list with code that would be like `self.list[number]`.
+  class variable that is accessed with a `self.` statement and one can individually address the items in the list with code that would be like `self.list[number]`.
   
 * To address multiple items at a time in a list, the code would be like `self.list[number1, number2, etc.`.
 
 * When writing code that says `self.list[number]`, the [] serve to index the list. It is strange, but the indexing
   begins at 0. For example, `self.led_list[0]` would refer to the first item in the list.
   
-* The `range` method can be used to create a sequence of numbers. Range can be set between 0 and a variable to make it dynamic - for example `range(0, number)`
-  would make a sequence 0, 1, 2, 3, ... number-1. It is helpful because, in a method, the variable can be set a standard but then also changed. 
+* The `range` method can be used to create a sequence of numbers. Range can be set between 0 and a variable to make it changeable. For example `range(0, number)`
+  would make a sequence `0, 1, 2, 3, ... number-1`. It is helpful because, in a method, the variable can be set a standard but then also changed. 
   One can then use that sequence to loop over code.  The `range` method allows the code in the `main.py` to specify the number of loops that is wanted for a method. 
   
 * Using `%2` in `if alternate_number % 2 == 0:` divides the `alternate_number` by 2 and then looks at the remainder. This
@@ -58,9 +58,9 @@ Here is the revised wiring diagram:
   To change file names safely, one can use PyCharm's "refactor" function that checks for anywhere that the code or file you are changing may be
   referred to and changes that too.
   
-# On Using Black As A Code Reformatter
+# On Using Black As A Code Formatter
 
-The tool "black" is a code reformatter that can work with any python (.py) file. Black reformats code into a standard 
+The tool "black" is a code formatter that can work with any python (.py) file. Black re-formats code into a standard 
 format, making organization simple and consistent.
 
 To use back, open a terminal window in the same directory as the file and for example: black fancyLED.py

@@ -18,4 +18,3 @@ while True:
     fancy2.all_off()
 
     print("Done.")
-

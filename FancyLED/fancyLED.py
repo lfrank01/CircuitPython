@@ -69,7 +69,12 @@ class FancyLED:
             self.led_list[2].value = not lit
             # This code alternates the far left and far right LED between on and off, creating an alternating effect.
             time.sleep(1)
-            print("Alternate Counter: " + str(alternate_number) + " out of " + str(number_of_alternates))
+            print(
+                "Alternate Counter: "
+                + str(alternate_number)
+                + " out of "
+                + str(number_of_alternates)
+            )
 
     def blink(self, number_of_blinks=6):
         # LEDs in object will blink on and off.
@@ -87,7 +92,12 @@ class FancyLED:
             self.led_list[2].value = lit
             time.sleep(1)
 
-            print("Blink Counter: " + str(blink_number) + " out of " + str(number_of_blinks))
+            print(
+                "Blink Counter: "
+                + str(blink_number)
+                + " out of "
+                + str(number_of_blinks)
+            )
 
     def chase(self, number_of_chases=4):
         # LEDs in object will one by one all turn on.
@@ -150,6 +160,7 @@ class FancyLED:
             led.value = False
         time.sleep(1)
         # This loops through each LED in the list and sets it to False, turning it off.
+
 
 # Note - For code formatting, the tool called "black" was helpful. Black will reformat any python file into a standard
 # format. To use it, open a terminal window in the same directory as the file and enter for example: black fancyLED.py
