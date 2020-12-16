@@ -18,3 +18,11 @@ FancyLED/.idea/misc.xml
 FancyLED/.idea/modules.xml
 FancyLED/.idea/vcs.xml
 FancyLED/fancy_led.py
+/.idea/.gitignore
+/.idea/CircuitPython.iml
+/.idea/libraries/MicroPython.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
