@@ -88,6 +88,35 @@ class RGB_PWM:
         self.g.duty_cycle = 65535
         self.b.duty_cycle = 65535
 
+# Below are functions for rainbow colors that involve more than "on" or "off" to make the colors.
+
+    def orange(self):
+        # Orange = (255, 127, 0)
+        self.r.duty_cycle = 0
+        self.g.duty_cycle = 42732
+        # The math: 65535 multiplied by (365-127)/365 = ~ 42732
+        # Because 0 indicates that the color will turn on, the RGB value are swapped.
+        # This means that 127 would be 365-127, so 238.
+        self.b.duty_cycle = 65535
+
+    def indigo(self):
+        # Indigo = (75, 0, 130)
+        self.r.duty_cycle = 52069
+        # The math: 65535 multiplied by (365-75)/365 = ~ 52069
+        self.g.duty_cycle = 65535
+        self.b.duty_cycle = 42194
+        # The math: 65535 multiplied by (365-130)/365 = ~ 42194
+
+    def violet(self):
+        # Violet = (148, 0, 211)
+        self.r.duty_cycle = 38962
+        # The math: 65535 multiplied by (365-148)/365 = ~ 38962
+        self.g.duty_cycle = 65535
+        self.b.duty_cycle = 27650
+        # The math: 65535 multiplied by (365-211)/365 = ~ 27650
+
+# Now, the rainbow function.
+
     def rainbow(self, rate: float):
         # Here, variable to this method called rate is handed in, which is the reciprocal of the time
         # between colors. The colon after rate shows the data type that will be used.
@@ -96,16 +125,20 @@ class RGB_PWM:
         # If the wrong data type was given, such as a string, Python would throw an error.
         # Even better, with PyCharm, the correct data type would be provided.
 
-        self.yellow()
+        self.red()
         # When using () after a method name, it calls that method from this method.
+        time.sleep(1. / rate)
+        self.orange()
+        time.sleep(1. / rate)
+        self.yellow()
         time.sleep(1. / rate)
         self.green()
         time.sleep(1. / rate)
         self.blue()
         time.sleep(1. / rate)
-        self.magenta()
+        self.indigo()
         time.sleep(1. / rate)
-        self.red()
+        self.violet()
         time.sleep(1. / rate)
 
 # Developing rainbow code now:
