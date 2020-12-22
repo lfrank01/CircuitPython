@@ -14,7 +14,6 @@ import pulseio
 import time
 
 
-
 class RGB_PWM:
 
     def __init__(self, red_pin, green_pin, blue_pin):
@@ -36,16 +35,16 @@ class RGB_PWM:
         # If the RGB pins were set to True or 1, the current would not travel anywhere because
         # there would not be a significant difference in voltage.
 
-        self.r = pulseio.PWMOut(red_pin, frequency=500)
+        self.r = pulseio.PWMOut(red_pin, frequency=5000)
 
         # The argument (r) must be (self.r) because there will be instances created from it, such as r1, r2, etc.
         # What the above code does is ensure that argument (r) will be a digital input-output pin and then
 
         # make it an output.
 
-        self.g = pulseio.PWMOut(green_pin, frequency=500)
+        self.g = pulseio.PWMOut(green_pin, frequency=5000)
 
-        self.b = pulseio.PWMOut(blue_pin, frequency=500)
+        self.b = pulseio.PWMOut(blue_pin, frequency=5000)
 
     def red(self):
         # The common anode RGB LED will glow red - set red pin on and others off.
@@ -109,3 +108,12 @@ class RGB_PWM:
         self.red()
         time.sleep(1. / rate)
 
+# Developing rainbow code now:
+
+# Red = (255, 127, 0)
+# Orange = (255, 127, 0)
+# Yellow = (255, 255, 0)
+# Green = (0, 255, 0)
+# Blue = (0, 0, 255)
+# Indigo = (75, 0, 130)
+# Violet = (148, 0, 211)
