@@ -6,13 +6,13 @@
 # This library is that class.
 
 import digitalio
+
 # This library is using (digialio), which works fine for making RGB colors go on or off, but not for
 # modulating brightness.
 import time
 
 
 class RGB:
-
     def __init__(self, red_pin, green_pin, blue_pin):
         # The (__init__) code runs when an object/instance is created.
         # It provides arguments for the object to use.
@@ -105,12 +105,12 @@ class RGB:
 
         self.yellow()
         # When using () after a method name, it calls that method from this method.
-        time.sleep(1. / rate)
+        time.sleep(1.0 / rate)
         self.green()
-        time.sleep(1. / rate)
+        time.sleep(1.0 / rate)
         self.blue()
-        time.sleep(1. / rate)
+        time.sleep(1.0 / rate)
         self.magenta()
-        time.sleep(1. / rate)
+        time.sleep(1.0 / rate)
         self.red()
-        time.sleep(1. / rate)
+        time.sleep(1.0 / rate)

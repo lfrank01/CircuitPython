@@ -6,16 +6,15 @@
 
 # This library is that class.
 
-# Note - The library does NOT work, currently.
 
 import pulseio
+
 # This library is using (pulseio), which works fine for making RGB colors go on or off, but not for
 # modulating brightness.
 import time
 
 
 class RGB_PWM:
-
     def __init__(self, red_pin, green_pin, blue_pin):
         # The (__init__) code runs when an object/instance is created.
         # It provides arguments for the object to use.
@@ -35,16 +34,18 @@ class RGB_PWM:
         # If the RGB pins were set to True or 1, the current would not travel anywhere because
         # there would not be a significant difference in voltage.
 
-        self.r = pulseio.PWMOut(red_pin, frequency=5000)
+        self.r = pulseio.PWMOut(red_pin, frequency=50)
 
         # The argument (r) must be (self.r) because there will be instances created from it, such as r1, r2, etc.
         # What the above code does is ensure that argument (r) will be a digital input-output pin and then
 
         # make it an output.
 
-        self.g = pulseio.PWMOut(green_pin, frequency=5000)
+        self.g = pulseio.PWMOut(green_pin, frequency=50)
+        # 50 pulses per second is faster than the eye can see. Movies refresh each image 24 times per sec.
+        # Setting this number too high just takes more of the processor's power.
 
-        self.b = pulseio.PWMOut(blue_pin, frequency=5000)
+        self.b = pulseio.PWMOut(blue_pin, frequency=50)
 
     def red(self):
         # The common anode RGB LED will glow red - set red pin on and others off.
@@ -88,7 +89,7 @@ class RGB_PWM:
         self.g.duty_cycle = 65535
         self.b.duty_cycle = 65535
 
-# Below are functions for rainbow colors that involve more than "on" or "off" to make the colors.
+    # Below are functions for rainbow colors that involve more than "on" or "off" to make the colors.
 
     def orange(self):
         # Orange = (255, 127, 0)
@@ -115,7 +116,7 @@ class RGB_PWM:
         self.b.duty_cycle = 27650
         # The math: 65535 multiplied by (365-211)/365 = ~ 27650
 
-# Now, the rainbow function.
+    # Now, the rainbow function.
 
     def rainbow(self, rate: float):
         # Here, variable to this method called rate is handed in, which is the reciprocal of the time
@@ -127,19 +128,25 @@ class RGB_PWM:
 
         self.red()
         # When using () after a method name, it calls that method from this method.
-        time.sleep(1. / rate)
+        time.sleep(1.0 / rate)
         self.orange()
-        time.sleep(1. / rate)
+        time.sleep(1.0 / rate)
         self.yellow()
-        time.sleep(1. / rate)
+        time.sleep(1.0 / rate)
         self.green()
-        time.sleep(1. / rate)
+        time.sleep(1.0 / rate)
         self.blue()
-        time.sleep(1. / rate)
+        time.sleep(1.0 / rate)
         self.indigo()
-        time.sleep(1. / rate)
+        time.sleep(1.0 / rate)
         self.violet()
-        time.sleep(1. / rate)
+        time.sleep(1.0 / rate)
+
+    def custom_color(self, r_set, g_set, b_set):
+        self.r.duty_cycle = r_set
+        self.g.duty_cycle = g_set
+        self.b.duty_cycle = b_set
+
 
 # Developing rainbow code now:
 

@@ -34,11 +34,12 @@ LEDs change colors. The task was to create a library and class that made the cod
   For example, `me = Human("Luke")` takes the argument `Luke` and gives it to the class `Human` to 
   create a new Human object. The `__init__` method of `Human` would be run when this line is executed.
 
-* An anode is the positive lead of the LED (where electrons flow out), and a cathode is the negative lead of the LED (where electrons flow in).
+* An anode is the positive lead of the LED (where electrons flow out), and a cathode is the negative lead of the LED 
+  (where electrons flow in).
 
-* A common anode RGB LED is basically a red, green, and blue LED crammed into one compartment. So electrons flow into one of the pins corresponding to a color, 
-  and they all flow out of the common anode pin back to the power source (to the positive connection because electrons are attracted to positive charge 
-  and repelled by negative charge).
+* A common anode RGB LED is basically a red, green, and blue LED crammed into one compartment. So electrons flow into 
+  one of the pins corresponding to a color, and they all flow out of the common anode pin back to the power source 
+  (to the positive connection because electrons are attracted to positive charge and repelled by negative charge).
 
 * The common anode RGB LED has an interesting way of being wired. A resistor must be placed between each RGB color leg 
   and its corresponding pin. This is because the RGB color legs run in parallel. Each RGB color leg requires a different 
@@ -69,10 +70,44 @@ LEDs change colors. The task was to create a library and class that made the cod
 [main.py](/Classes_Objects_And_Modules/main.py)
 
 **Note on using digital outputs**
-* The assignment called for the use of digital outputs to drive the common anode RGB LEDs, not analog ones. As a result, the color possibilities were limited to combinations of the pins being either on (False) or off (True). This would result in 8 possible colors being rendered, including black (all off) and 
-white (all on). There were (2^3) combinations for colors because there were 3 pins and 2 states.
 
-* The library `digitalio` was used to drive the digital output pins. To make more colors, one would have to use pulse width modulation (PWM) on the digital output pins to create the effect of analog variation. Analog variation would control the current flowing to each pin rather than the digital states being limited to on or off, creating more possible color options.
+* The assignment called for the use of digital outputs to drive the common anode RGB LEDs, not analog ones. 
+  As a result, the color possibilities were limited to combinations of the pins being either on (False) or off (True). 
+  This would result in 8 possible colors being rendered, including black (all off) and 
+  white (all on). There were (2^3) combinations for colors because there were 3 pins and 2 states.
+
+* The library `digitalio` was used to drive the digital output pins. To make more colors, one would have to use pulse 
+  width modulation (PWM) on the digital output pins to create the effect of analog variation. 
+  Analog variation would control the current flowing to each pin rather than the digital states being limited 
+  to on or off, creating more possible color options.
+
+**Note on using pulse-width modulation (PWM)**
+
+A bonus for this assignment was to create a rainbow function that made a common anode RGB LED cycle through the 
+colors of the rainbow. Pulse-width modulation was required for the rainbow function, since the colors orange, indigo,
+and violet cannot be made by turning colors on and off. Below are some lessons learned about pulse-width modulation:
+
+* To vary the common-anode RGB LEDs, pulse-width modulation uses frequency and duty cycle.
+
+* For more information on frequency and duty cycle, here is an [explanation](https://github.com/lfrank01/CircuitPython/tree/main/CircuitPython_Servo)
+  from a previous assignment.
+  
+* The digital input-outputs pins on the Adafruit Metro MO Express are 1, 2, 3, 4, 5, 7, 9, 11, 12, and 13.
+
+* If the digital input-output pins 0, 6, 8, and 10 are used, the error "All timers in use" will apear. 
+
+* The frequency of the PWM pins can remain constant at 5000 
+
+
+This section required pulse-width modulation, which was confusing at first to me, but there is 
+now PWM code. Using pulse-width modulation over digital input-output is advisable. However, on the Adafruit Metro MO 
+Express, only some pins are PWM-compatible.
+
+
+  
+* First of all, pulse-width modulation operates by manipulating frequency and duty cycle. 
+
+* 
 
 
 # On Using PyCharm As An IDE 
