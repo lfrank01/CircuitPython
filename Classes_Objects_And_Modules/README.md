@@ -13,7 +13,7 @@ In Circuit Python, the class `Human` would be referenced like this:
 The code for the library `life` would usually be placed in a file called `life.py`.
 
 In the class `Human`, there would be different properties and methods. 
-An object could be created from the class called "Luke."
+An object called "Luke" could be created from the class `Human.`
 
 `Luke` could have different properties such as age or hair color, and he could have methods such as eat or sleep.
 
@@ -35,10 +35,10 @@ for fading through colors, and a function for randomly selecting color "positive
   For example, `me = Human("Luke")` takes the argument `Luke` and gives it to the class `Human` to 
   create a new Human object. The `__init__` method of `Human` would be run when this line is executed.
 
-* An anode is the positive lead of the LED (where electrons flow out), and a cathode is the negative lead of the LED 
+* An anode is the negatively-charged electrode of the LED (where electrons flow out), and a cathode is the positively-charged electode of the LED 
   (where electrons flow in).
 
-* A common-anode RGB LED is basically a red, green, and blue LED crammed into one compartment. So electrons flow into 
+* A common-anode RGB LED is basically a red, green, and blue LED crammed into one compartment. Electrons flow into 
   one of the pins corresponding to a color, and they all flow out of the common-anode pin back to the power source 
   (to the positive connection because electrons are attracted to positive charge and repelled by negative charge).
 
@@ -64,11 +64,11 @@ for fading through colors, and a function for randomly selecting color "positive
 * Here is what was used for the test code:
 [Test_LED.py](/Classes_Objects_And_Modules/Test_Led.py)
   
-* My code comments explain most of how the code works. Here is my library code that uses pulse-width modulation.
+* My code comments explain most of how the code works. Here is my library code that uses pulse-width modulation:
 [rgb_pwm.py](/Classes_Objects_And_Modules/rgb_pwm.py)
   
 * Additionally, here is the digital input-output code. However, this code is not used in the main.py file because 
-  it cannot make as many colors as PWM can.
+  it cannot make as many colors as PWM can:
 [rgb.py](/Classes_Objects_And_Modules/rgb.py)
   
 * Below is the `main.py` file that imported the `rgb.py` library:
@@ -104,7 +104,7 @@ and violet cannot be made by just turning colors on and off. Below are some less
 * If the digital input-output pins 0, 6, 8, and 10 are used, the error "All timers in use" will appear. 
 
 * The frequency controls how many times per second the common-anode RGB LED will refresh. It is advisable to keep the 
-  frequency below 50 because after a frequency of 24 (what movies use), the change in frequency is not visible to the 
+  frequency below 50 because, after a frequency of 24 (what movies use), the change in frequency is not visible to the 
   human eye.
 
 
