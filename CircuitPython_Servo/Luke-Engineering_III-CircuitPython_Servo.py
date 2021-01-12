@@ -6,9 +6,9 @@ from adafruit_motor import servo
 import touchio
 
 pwm = pulseio.PWMOut(
-                    # (polseio) is the directory.
+                    # (pulseio) is the directory.
                     # (.PMWOut) is a folder inside of that directory.
-                    # The indented codes below are the
+                    # The indented code below is the
                     # Parameters of the (.PMWOut) folder.
                     pin=board.A2,
                     duty_cycle=2 ** 15,
@@ -23,7 +23,7 @@ pwm = pulseio.PWMOut(
 
 dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
 
-# Why must (board.NEOPIXEL.1) 1 be listed?
+# Why must ".1" in (board.NEOPIXEL.1) be listed?
 # Are there multiple built-in neopixels in the Metro Express?
 
 my_servo = servo.Servo(pwm)
@@ -45,7 +45,7 @@ while True:
         my_servo.angle = min(
                             # The (min feature takes the values inside
                             # Parenthesis and chooses the smallest.
-                            # It was used to set paremeters for
+                            # It was used to set parameters for
                             # The (my_servo.angle) value.
                             my_servo.angle + 1,
                             180
@@ -60,7 +60,7 @@ while True:
         my_servo.angle = max(
                             # The (max feature takes the values
                             # inside parenthesis and chooses the largest.
-                            # It was used to set paremeters for
+                            # It was used to set parameters for
                             # The (my_servo.angle) value.
                             my_servo.angle - 1,
                             0
