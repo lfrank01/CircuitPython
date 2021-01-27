@@ -1,4 +1,4 @@
-# Origonal code is from:
+# Original code is from:
 # https://github.com/gventre04/CircuitPython/blob/master/photointerrupter.py
 
 # This code includes LCD usage.
@@ -30,7 +30,7 @@ while not i2c.try_lock():
 try:
     while not device_address:
         device_address_list = i2c.scan()
-        # The i2c.scan() returns a LIST of adddresses.
+        # The i2c.scan() returns a LIST of addresses.
         # I just want the first address. So:
         device_address = device_address_list[0]
         print("I2C interface found at: ", hex(device_address))
@@ -64,7 +64,7 @@ Interrupter.pull = Pull.UP
 # ... to a pin it is hard to tell if the pin is True (VCC) or False (GND).
 
 # With a pull-up resistor, the photointerrupter reads...
-# ... high when it is not acitve.
+# ... high when it is not active.
 
 # When the photointerruptor is activated,...
 # ... it reads as (False) and connects to ground.
@@ -109,7 +109,7 @@ while True:
         # ... because a standard print statement will only take one argument.
         # The error message was:
         # "function takes 2 positional arguments but 3 were given."
-        # This was because I used a (,), which seperates arguments.
+        # This was because I used a (,), which separates arguments.
         # The (+) makes the two arguments into one, allowing the code to work.
 
         Max = time.time() + 4
@@ -118,5 +118,5 @@ while True:
         # ... can be given: inline formatting.
         # Inline formatting looks something like this:
         # print("Interrupts: %i, mood: %s, moonphase: %d", Counter)
-        # The %s are fillers for the strings and the commas seperate them.
-        # The (%i) would indictate an integer.
+        # The %s are fillers for the strings and the commas separate them.
+        # The (%i) would indicate an integer.
