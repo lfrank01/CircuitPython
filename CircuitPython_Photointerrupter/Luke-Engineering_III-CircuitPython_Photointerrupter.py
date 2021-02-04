@@ -1,4 +1,4 @@
-# Origonal code is from:
+# Original code is from:
 # https://github.com/gventre04/CircuitPython/blob/master/photointerrupter.py
 
 from digitalio import DigitalInOut, Direction, Pull
@@ -29,7 +29,7 @@ Interrupter.pull = Pull.UP
 # ... to a pin it is hard to tell if the pin is True (VCC) or False (GND).
 
 # With a pull-up resistor, the photointerrupter reads...
-# ... high when it is not acitve.
+# ... high when it is not active.
 
 # When the photointerruptor is activated,...
 # ... it reads as (False) and connects to ground.
@@ -55,10 +55,10 @@ while True:
     # ... Meaning whether it is HIGH or LOW.
 
     if Photo and not State:
-            Counter += 1
+        Counter += 1
 
     Remaining = Max - time.time()
 
     if Remaining <= 0:  # (==) does not work.
-        print("Interrupts:" + str(Counter)) # A (,) would not work.
+        print("Interrupts:" + str(Counter))  # A (,) would not work.
         Max = time.time() + 4

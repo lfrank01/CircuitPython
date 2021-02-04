@@ -5,7 +5,7 @@ import touchio
 from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
 # NOTE - I had to modify this library to 'import microcontroller'...
 # ...because the author had forgotten to.
-# There is an issue about this mentioned on github but it hasnt yet been fixed:
+# There is an issue about this mentioned on github but it hasn't yet been fixed:
 # https://github.com/dhalbert/CircuitPython_LCD/issues.
 
 # OK. First, find out the address of my i2c board because...
@@ -24,7 +24,7 @@ while not i2c.try_lock():
 try:
     while not device_address:
         device_address_list = i2c.scan()
-        # The i2c.scan() returns a LIST of adddresses.
+        # The i2c.scan() returns a LIST of addresses.
         # I just want the first address. So:
         device_address = device_address_list[0]
         print("I2C interface found at: ", hex(device_address))
